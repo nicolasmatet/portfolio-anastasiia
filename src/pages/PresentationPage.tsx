@@ -138,7 +138,7 @@ export function PresentationPage() {
                     direction={{ xs: 'column', sm: 'column', md: 'row' }}
                     spacing={{ xs: 2, sm: 2, md: 4 }}
                     sx={{ display: 'flex' }}>
-                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained'>CV</Button>
+                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch", borderColor:'#FFFFFF' }} variant='contained'>CV</Button>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined'>VOIR PORTFOLIO</Button>
                     <Stack sx={{ flex: 3, minWidth: "16ch", maxWidth: '24ch' }}><SocialLinks /></Stack>
                 </Stack>

@@ -11,7 +11,7 @@ export const common: ThemeOptions = {
                 root: {
                     border: '2px solid',
                     '&:hover': {
-                        border: '2px solid',
+                        border: '2px solid'
                     },
                     fontWeight: 700
                 },
