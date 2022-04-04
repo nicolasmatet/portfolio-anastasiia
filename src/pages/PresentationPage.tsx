@@ -1,117 +1,24 @@
-import { Button, Link, Stack, styled, ThemeProvider, Typography } from '@mui/material';
+import { Button, Stack, ThemeProvider, Typography } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getTheme } from '../themes/Themes';
+import { CVGrid, CVSquare, SquarePrimary } from '../ui/Cv';
+import { HeaderContainer, Logo } from '../ui/Header';
 import { ProgressiveImg } from '../ui/Image';
+import { SocialLinks } from '../ui/SocialLinks';
 
-const Logo = styled(Stack)(({ theme }) => ({
-    backgroundColor: theme.palette.background.default,
-    cursor: 'pointer',
-    color: theme.palette.text.primary,
-    [theme.breakpoints.down('sm')]: {
-        padding: theme.spacing(2),
-    },
-    [theme.breakpoints.up('sm')]: {
-        padding: theme.spacing(4),
-    },
-    'div:nth-of-type(1)': { maxWidth: '300px' }
-}));
 
-const SquarePrimary = styled(Stack)(({ theme }) => ({
-    backgroundColor: theme.palette.background.default,
-    color: theme.palette.text.primary,
-    display: 'flex',
-    justifyContent: 'center',
-    [theme.breakpoints.down('sm')]: {
-        alignItems: 'center',
-        paddingBottom: theme.spacing(2),
-        paddingLeft: theme.spacing(2),
-        paddingRight: theme.spacing(2)
-    },
-    [theme.breakpoints.up('sm')]: {
-        alignItems: 'start',
-        paddingBottom: theme.spacing(4),
-        paddingLeft: theme.spacing(4),
-        paddingRight: theme.spacing(4)
-    }
-}));
 
-const CVGrid = styled(Stack)(({ theme }) => ({
-    display: 'flex',
-    flexWrap: 'wrap',
-    flexDirection: 'row',
 
-    backgroundColor: theme.palette.background.default,
-    color: theme.palette.text.primary,
-    [theme.breakpoints.down('sm')]: {
-        'div:nth-of-type(2n+1)': {
-            backgroundColor: theme.palette.background.paper,
-            color: theme.palette.text.secondary,
-        }
-    },
-    [theme.breakpoints.up('sm')]: {
-        'div:nth-of-type(3n+1)': {
-            backgroundColor: theme.palette.background.paper,
-            color: theme.palette.text.secondary,
-        }
-    }
-}));
-
-const CVSquare = styled(Stack)(({ theme }) => ({
-    minWidth: '32ch',
-    display: 'flex',
-    flex: 1,
-    border: '1px solid',
-    borderColor: theme.palette.text.primary,
-    flexDirection: 'column',
-    [theme.breakpoints.down('md')]: {
-        paddingLeft: theme.spacing(4),
-        paddingRight: theme.spacing(4),
-        paddingTop: theme.spacing(2),
-        paddingBottom: theme.spacing(2),
-
-    },
-    [theme.breakpoints.up('md')]: {
-        height: '24ch',
-        paddingLeft: theme.spacing(8),
-        paddingRight: theme.spacing(8),
-        paddingTop: theme.spacing(4),
-        paddingBottom: theme.spacing(4),
-    },
-    [theme.breakpoints.up('sm')]: {
-        minWidth: '64ch'
-    },
-    'h4:nth-of-type(1)': {
-        marginBottom: theme.spacing(2),
-    },
-}));
-
-export function SocialLinks() {
-    return <Stack direction="row" style={{ margin: 'auto' }} spacing={2}>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_mail.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_instagram.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_linkedin.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_photo.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_behance.png"></ProgressiveImg>
-        </Link>
-    </Stack>
-}
 export function PresentationPage() {
     const theme = getTheme('presentation')
     const navigate = useNavigate()
     return <ThemeProvider theme={theme}>
-        <Logo onClick={() => navigate('/')}>
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc.png"></ProgressiveImg>
-        </Logo>
+        <HeaderContainer>
+            <Logo onClick={() => navigate('/')}>
+                <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc.png"></ProgressiveImg>
+            </Logo>
+        </HeaderContainer>
         <SquarePrimary
             direction={{ xs: 'column-reverse', sm: 'column', md: 'row' }}
             spacing={{ xs: 0, sm: 0, md: 12, lg: 24 }}>
@@ -138,7 +45,7 @@ export function PresentationPage() {
                     direction={{ xs: 'column', sm: 'column', md: 'row' }}
                     spacing={{ xs: 2, sm: 2, md: 4 }}
                     sx={{ display: 'flex' }}>
-                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch", borderColor:'#FFFFFF' }} variant='contained'>CV</Button>
+                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained'>CV</Button>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined'>VOIR PORTFOLIO</Button>
                     <Stack sx={{ flex: 3, minWidth: "16ch", maxWidth: '24ch' }}><SocialLinks /></Stack>
                 </Stack>
@@ -169,7 +76,7 @@ export function PresentationPage() {
                 </Typography>
             </CVSquare>
             <CVSquare>
-                <Typography variant='h4'>
+                <Typography variant='h3'>
                     CE DONT JE SUIS FIÈRE
                 </Typography>
                 <Typography variant='body1'>

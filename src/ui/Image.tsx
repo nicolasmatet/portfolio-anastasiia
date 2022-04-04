@@ -22,12 +22,11 @@ export function ProgressiveImg(props: any) {
         }
     }, [loaded])
     return (
-        <div>
             <img
                 onLoad={() => setLoaded(true)}
                 style={innerStyle}
                 src={src}
                 {...others} />
-        </div>)
+)
 }
 

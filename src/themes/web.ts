@@ -1,19 +1,20 @@
 import { ThemeOptions } from "@mui/material";
 
-export const landing: ThemeOptions = {
+export const web: ThemeOptions = {
     palette: {
         primary: {
-            main: '#FFFFFF',
-            dark: '#FFFFFF',
-            light: '#FFFFFF',
+            main: '#658381',
         },
         secondary: {
-            main: '#FFFFFF',
+            main: '#658381',
         },
-
+        text: {
+            primary: '#FFFFFF',
+            secondary: '##C6977D'
+        },
         background: {
-            default: '#102D29',
-            paper: '#102D29',
+            default: '#FFFFFF',
+            paper: '#65838180',
         },
         error: {
             main: '#E8F2E7',

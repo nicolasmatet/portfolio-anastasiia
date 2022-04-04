@@ -9,12 +9,14 @@ export const common: ThemeOptions = {
         MuiButton: {
             styleOverrides: {
                 root: {
+                    fontWeight: 700
+                },
+                outlined: {
                     border: '2px solid',
                     '&:hover': {
                         border: '2px solid'
-                    },
-                    fontWeight: 700
-                },
+                    }
+                }
             },
         },
     },
