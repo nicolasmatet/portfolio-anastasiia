@@ -1,20 +1,20 @@
 import { ThemeOptions } from "@mui/material";
 
-export const presentation: ThemeOptions = {
+export const mobile: ThemeOptions = {
     palette: {
         primary: {
-            main: '#FFFFFF',
+            main: '#7A7182',
         },
         secondary: {
-            main: '#000000',
+            main: '#7A7182',
         },
         text: {
             primary: '#FFFFFF',
-            secondary: '#000000'
+            secondary: '#C6977D'
         },
         background: {
-            default: '#658381',
-            paper: '#FFFFFF',
+            default: '#FFFFFF',
+            paper: '#7A718280',
         }
     }
 };

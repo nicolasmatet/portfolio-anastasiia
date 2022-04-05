@@ -14,12 +14,6 @@ export const landing: ThemeOptions = {
         background: {
             default: '#102D29',
             paper: '#102D29',
-        },
-        error: {
-            main: '#E8F2E7',
-        },
-        warning: {
-            main: '#E8F2E7',
-        },
+        }
     }
 };

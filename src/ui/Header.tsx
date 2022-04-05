@@ -44,7 +44,7 @@ export function Header(props: any) {
     const { children } = props
     const navigate = useNavigate()
     return <HeaderContainer direction="row">
-        <Logo onClick={() => navigate('/')}>
+        <Logo onClick={() => navigate('/portfolio')}>
             <ProgressiveImg src="/portfolio_elements/logo_as.png" />
         </Logo>
         <Stack direction="row" style={{ alignItems: "center" }}>

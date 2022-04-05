@@ -15,12 +15,6 @@ export const graphique: ThemeOptions = {
         background: {
             default: '#FFFFFF',
             paper: '#82665780',
-        },
-        error: {
-            main: '#E8F2E7',
-        },
-        warning: {
-            main: '#E8F2E7',
-        },
+        }
     }
 };

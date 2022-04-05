@@ -7,7 +7,6 @@ import { getTheme } from '../themes/Themes';
 
 export function LandingPage() {
     const theme = getTheme('landing')
-    const navigate = useNavigate()
     return <ThemeProvider theme={theme}>
         <CssBaseline />
 
@@ -20,10 +19,10 @@ export function LandingPage() {
                     margin: 'auto',
                     display: 'flex',
                 }}>
-                <Button variant="outlined" sx={{ flex: 1, paddingLeft: '16px', paddingRight: '16px' }} href='/presentation' >
+                <Button variant="outlined" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/presentation' >
                     ABOUT ME
                 </Button>
-                <Button variant="contained" sx={{ flex: 1, paddingLeft: '16px', paddingRight: '16px' }}>
+                <Button variant="contained" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/portfolio'>
                     PORTFOLIO
                 </Button>
             </Stack>

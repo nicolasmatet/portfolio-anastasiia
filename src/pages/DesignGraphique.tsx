@@ -1,15 +1,13 @@
-import { Stack, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
-import { CVGrid, CVSquare } from '../ui/Cv';
-import { Figma, Illustrator, InDesign, Spline, Wordpress } from '../ui/DesignTools';
+import { Figma, Illustrator, InDesign, Spline } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ProgressiveImg } from '../ui/Image';
-import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { APropos, Date, Outils, Perimetre, ProjectDescription, Projet, TravailRealise } from '../ui/ProjectDetail';
 import { Carousel } from '../ui/Carousel';
 
-export function DesignGraphique(props: any) {
+export function DesignGraphique() {
     const theme = getTheme('graphique')
     return <ThemeProvider theme={theme}>
         <Header>
@@ -24,7 +22,7 @@ export function DesignGraphique(props: any) {
                 <APropos>
                     Ce projet a été créé pour présenter les start-ups de l'État, qui ont été accompagnées par une équipe de BercyHub en 2020.<br></br>
                     <br></br>
-                    BERCY HUB chargée de préfigurer un incubateur numérique ministériel à côté de sa mission d’administration ministérielle des données.
+                    BERCY HUB chargée de préfigurer un incubateur numérique ministériel à côté de sa mission d'administration ministérielle des données.
 
                 </APropos>
                 <TravailRealise>
@@ -121,7 +119,7 @@ export function DesignGraphique(props: any) {
                     - sélection et création d'illustrations, d'icônes<br></br>
                     - mises en page correspondant au design du projet de start-up<br></br>
                     - réalisation du design dans InDesign<br></br>
-                    - création d’une navigation cliquable dans un fichier pdf
+                    - création d'une navigation cliquable dans un fichier pdf
                 </TravailRealise>
                 <Outils category="detail">
                     <Illustrator />
@@ -193,8 +191,8 @@ export function DesignGraphique(props: any) {
                 </APropos>
                 <TravailRealise>
                     - concevoir une idée pour une illustration <br></br>
-                    - sélection de référence pour l’inspiration <br></br>
-                    - création d’une croquis <br></br>
+                    - sélection de référence pour l'inspiration <br></br>
+                    - création d'une croquis <br></br>
                     - sélection d'un style et d'une palette de couleurs <br></br>
                     - réalisation d'une illustration dans Adobe Illustrator
                 </TravailRealise>
@@ -273,7 +271,7 @@ export function DesignGraphique(props: any) {
                 </APropos>
                 <TravailRealise>
                     - concevoir une idée pour une illustration<br></br>
-                    - sélection de référence pour l’inspiration<br></br>
+                    - sélection de référence pour l'inspiration<br></br>
                     - création d'illustrations et d'icônes<br></br>
                     - sélection d'un style et d'une palette de couleurs<br></br>
                     - réalisation d'une illustration dans Adobe Illustrator

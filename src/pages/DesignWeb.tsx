@@ -1,13 +1,12 @@
-import { Stack, ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
-import { CVGrid, CVSquare } from '../ui/Cv';
 import { Figma, Illustrator, Wordpress } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ProgressiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
 
-export function DesignWeb(props: any) {
+export function DesignWeb() {
     const theme = getTheme('web')
     return <ThemeProvider theme={theme}>
         <Header>
@@ -52,15 +51,15 @@ export function DesignWeb(props: any) {
 
             <ProjectDescription url="/">
                 <APropos>
-                    Ce projet a été réalisé dans le cadre d’accompagnement des startups ministérielles sur un volet Design UX/UI de la plateforme impact.gouv.fr.<br></br>
+                    Ce projet a été réalisé dans le cadre d'accompagnement des startups ministérielles sur un volet Design UX/UI de la plateforme impact.gouv.fr.<br></br>
                     <br></br>
                     Son objectif était d'améliorer la carte de visualisation des données et d'adapter la conception aux besoins des utilisateurs.<br></br>
                 </APropos>
                 <TravailRealise>
-                    - design UX rénové pour l’affichage et la navigation des catégories d’entreprise dans les cartes ( tranches ou activités)<br></br>
-                    - design UI compliant avec l’identité graphique de la plateforme<br></br>
-                    - création d’un prototype dans Figma et des éléments graphiques<br></br>
-                    - préparation d’une fiche technique pour le développement<br></br>
+                    - design UX rénové pour l'affichage et la navigation des catégories d'entreprise dans les cartes ( tranches ou activités)<br></br>
+                    - design UI compliant avec l'identité graphique de la plateforme<br></br>
+                    - création d'un prototype dans Figma et des éléments graphiques<br></br>
+                    - préparation d'une fiche technique pour le développement<br></br>
                 </TravailRealise>
                 <Outils category="detail">
                     <Figma />

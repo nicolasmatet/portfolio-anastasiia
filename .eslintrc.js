@@ -21,5 +21,6 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/no-unescaped-entities": 0 
     }
 }
