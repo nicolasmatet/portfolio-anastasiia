@@ -46,7 +46,7 @@ export function PresentationPage() {
                     spacing={{ xs: 2, sm: 2, md: 4 }}
                     sx={{ display: 'flex' }}>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained'>CV</Button>
-                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined'>VOIR PORTFOLIO</Button>
+                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined' onClick={()=>navigate('/portfolio')}>VOIR PORTFOLIO</Button>
                     <Stack sx={{ flex: 3, minWidth: "16ch", maxWidth: '24ch' }}><SocialLinks /></Stack>
                 </Stack>
             </Stack>
@@ -76,7 +76,7 @@ export function PresentationPage() {
                 </Typography>
             </CVSquare>
             <CVSquare>
-                <Typography variant='h3'>
+                <Typography variant='h4'>
                     CE DONT JE SUIS FIÈRE
                 </Typography>
                 <Typography variant='body1'>

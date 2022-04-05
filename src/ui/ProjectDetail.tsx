@@ -6,6 +6,7 @@ export function APropos(props: any) {
     const { children } = props
     return <Stack direction="column">
         <Typography variant="h4">A PROPOS DU PROJET</Typography>
+        <br></br>
         <Typography variant="body1">{children}</Typography>
     </Stack>
 }

@@ -20,10 +20,10 @@ export const PageList = [
         route: { path: '/graphique', element: <DesignGraphique /> },
         data: { image: '/portfolio_elements/page_portfolio_nav/3 graph.png', title: 'Graphique' }
     },
-    // {
-    //     route: { path: '/logos', element: <Logos /> },
-    //     data: { image: '/portfolio_elements/page_portfolio_nav/4 logo.png', title: 'Logos' }
-    // },
+    {
+        route: { path: '/logos', element: <DesignGraphique /> },
+        data: { image: '/portfolio_elements/page_portfolio_nav/4 logo.png', title: 'Logos' }
+    },
     {
         route: { path: '/animations', element: <Animations /> },
         data: { image: '/portfolio_elements/page_portfolio_nav/5 animation.png', title: 'Animations' }

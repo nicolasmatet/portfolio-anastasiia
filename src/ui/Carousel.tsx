@@ -14,7 +14,7 @@ const CarouselWrapper = styled(Stack)(({ theme }) => ({
         paddingTop: theme.spacing(4),
     },
     [theme.breakpoints.up('sm')]: {
-        paddingTop: theme.spacing(8),
+        paddingTop: theme.spacing(8)
     },
     backgroundColor: theme.palette.background.paper,
     color: theme.palette.background.default

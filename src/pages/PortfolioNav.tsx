@@ -12,9 +12,9 @@ const EntryImageWrapper = styled(Stack)(({ theme }) => ({
         width: "30ch",
     },
     [theme.breakpoints.only('md')]: {
-        width: "20ch",
+        width: "30ch",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down('md')]: {
         width: "30ch",
     },
 }))
@@ -52,16 +52,16 @@ export function PortfolioNav() {
     const navigate = useNavigate();
 
     const entriesData = [
-        [PageList[0], PageList[1], PageList[2]],
-        [PageList[3], PageList[4], PageList[5], PageList[6]]
+        [PageList[0], PageList[1], PageList[2], PageList[3]],
+        [PageList[4], PageList[5], PageList[6], PageList[7]]
     ]
     const entries = entriesData.map((entriesDataInRow, rowIdx) => {
         const entriesInRow = entriesDataInRow.map(
             (entryData) => <PortfolioEntry onClick={() => navigate(entryData.route.path)} key={entryData.route.path} {...entryData.data} />)
-        return <Stack key={rowIdx} direction="row" spacing={4}>{...entriesInRow}</Stack>
+        return <Stack key={rowIdx} direction={{ xs: "column", sm: "column", md: "column", lg:"row" }} spacing={4}>{...entriesInRow}</Stack>
     })
     return <ThemeProvider theme={theme}>
-        <Header>
+        <Header hideGoBack>
             <ProgressiveImg src="/portfolio_elements/page_portfolio_nav/PORTFOLIO lettres.png"></ProgressiveImg>
         </Header>
         <PortfolioNavWrapper direction="column" spacing={4}>

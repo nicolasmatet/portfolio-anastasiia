@@ -7,7 +7,7 @@ import { ProgressiveImg } from './Image';
 export const Logo = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
     color: theme.palette.text.primary,
-    maxWidth: '300px'
+    maxWidth: '400px'
 }));
 
 export const HeaderContainer = styled(Stack)(({ theme }) => ({
@@ -33,24 +33,24 @@ const TitleContainer = styled(Stack)(({ theme }) => ({
 
 const IconRetourContainer = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
-    maxHeight: '4ch',
-    maxWidth: '4ch',
-    marginRight:'2ch'
+    maxHeight: '5ch',
+    maxWidth: '5ch',
+    marginRight: '2ch'
 
 }));
 
 
 export function Header(props: any) {
-    const { children } = props
+    const { children, hideGoBack } = props
     const navigate = useNavigate()
     return <HeaderContainer direction="row">
-        <Logo onClick={() => navigate('/portfolio')}>
+        <Logo onClick={() => navigate('/')}>
             <ProgressiveImg src="/portfolio_elements/logo_as.png" />
         </Logo>
         <Stack direction="row" style={{ alignItems: "center" }}>
-            <IconRetourContainer>
+            {!hideGoBack && <IconRetourContainer onClick={() => navigate('/portfolio')}>
                 <ProgressiveImg src="/portfolio_elements/icone_retour.png" />
-            </IconRetourContainer>
+            </IconRetourContainer>}
             <TitleContainer direction="row">
                 {children}
             </TitleContainer>

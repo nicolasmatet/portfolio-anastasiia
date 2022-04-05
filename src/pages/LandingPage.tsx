@@ -1,7 +1,6 @@
 import { ThemeProvider } from '@emotion/react';
-import { Button, CssBaseline, Stack } from '@mui/material';
+import { Button, CssBaseline, Stack, Typography } from '@mui/material';
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
 import { getTheme } from '../themes/Themes';
 
 
@@ -20,10 +19,15 @@ export function LandingPage() {
                     display: 'flex',
                 }}>
                 <Button variant="outlined" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/presentation' >
-                    ABOUT ME
+                    <Typography variant="h6">
+                        ABOUT ME
+                    </Typography>
                 </Button>
                 <Button variant="contained" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/portfolio'>
-                    PORTFOLIO
+                    <Typography variant="h6">
+                        PORTFOLIO
+                    </Typography>
+
                 </Button>
             </Stack>
         </Stack>
