@@ -20,7 +20,7 @@ export function TravailRealise(props: any) {
 
 function ProjectDetail(props: any) {
     const { title, children } = props
-    return <Stack direction="column">
+    return <Stack direction="column" style={{ flexGrow: 1 }}>
         <Typography variant="h6">{title}</Typography>
         {children}
     </Stack>
@@ -30,7 +30,7 @@ const DetailContainer = styled(Stack)(({ theme }) => ({
     display: 'flex',
     [theme.breakpoints.up('md')]: {
         flexDirection: "row",
-        "& *": { marginRight: theme.spacing(2) }
+        justifyContent: "space-between"
     },
     [theme.breakpoints.down('md')]: {
         flexDirection: "column",
@@ -41,14 +41,14 @@ const DetailContainer = styled(Stack)(({ theme }) => ({
 }));
 
 const ToolContainer = styled(Stack)(({ theme }) => ({
-    "& img": { width: "4ch", height: "4ch", maxWidth: "4ch", maxHeight: "4ch" }
+    "& img": { height: "4ch", maxHeight: "4ch" }
 }));
 
 export function Outils(props: any) {
     const { children, other } = props
     return <ProjectDetail title="outils"  {...other}>
         <ToolContainer direction="row" spacing={1}>
-            {children}
+            {React.Children.map(children, (c: any, idx: number) => <div key={idx}>{c}</div>)}
         </ToolContainer>
     </ProjectDetail>
 }
@@ -62,7 +62,7 @@ export function Date(props: any) {
 }
 
 
-const ProjectDescriptionContainer = styled(Stack)(({ theme }) => ({
+const ProjectDescriptionWrapper = styled(Stack)(({ theme }) => ({
     [theme.breakpoints.up('lg')]: {
         padding: theme.spacing(8)
     },
@@ -75,8 +75,12 @@ const ProjectDescriptionContainer = styled(Stack)(({ theme }) => ({
     }
 }));
 
+export function ProjectImage(props: any) {
+    const { children } = props;
+    return <Stack><ProjectImageWrapper>{children}</ProjectImageWrapper></Stack >
+}
 
-export const ProjectImage = styled(Stack)(({ theme }) => ({
+const ProjectImageWrapper = styled(Stack)(({ theme }) => ({
     backgroundColor: theme.palette.background.paper,
     [theme.breakpoints.up('lg')]: {
         padding: theme.spacing(8)
@@ -95,13 +99,16 @@ export function ProjectDescription(props: any) {
     const others = children.filter((c: any) => c.props.category != "detail")
 
     const seeMore = url ? <Button variant='contained' style={{ width: '32ch', flexGrow: 0 }}>Voir plus</Button> : <></>
-    return <ProjectDescriptionContainer spacing={4}>
-        {others}
-        <DetailContainer>
-            {details}
-        </DetailContainer>
-        {seeMore}
-    </ProjectDescriptionContainer>
+    return <Stack>
+        <ProjectDescriptionWrapper spacing={4}>
+            {others}
+            <DetailContainer>
+                {details}
+                <Stack style={{ flexGrow: 1 }} />
+            </DetailContainer>
+            {seeMore}
+        </ProjectDescriptionWrapper>
+    </Stack>
 }
 
 export const Projet = styled(Stack, {
@@ -115,5 +122,5 @@ export const Projet = styled(Stack, {
         [theme.breakpoints.down('md')]: {
             flexDirection: "column-reverse",
         },
-        "& *": { flex: 1 }
+        ">*": { flex: 1 }
     }));

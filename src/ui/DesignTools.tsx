@@ -22,6 +22,11 @@ export function Illustrator() {
     return <DesignTool src="portfolio_elements/design_tools/logo_illustrator.png" />
 }
 
+export function InDesign() {
+    return <DesignTool src="portfolio_elements/design_tools/logo_indesign.png" />
+}
+
+
 export function Photoshop() {
     return <DesignTool src="portfolio_elements/design_tools/logo_photoshop.png" />
 }

@@ -41,7 +41,9 @@ export function DesignWeb(props: any) {
             </ProjectDescription>
 
             <ProjectImage>
-                <ProgressiveImg src="/portfolio_elements/page1_web/projet_danse_dense.png" />
+                <div>
+                    <ProgressiveImg src="/portfolio_elements/page1_web/projet_danse_dense.png" />
+                </div>
             </ProjectImage>
         </Projet>
 
@@ -73,7 +75,9 @@ export function DesignWeb(props: any) {
             </ProjectDescription>
 
             <ProjectImage>
-                <ProgressiveImg src="/portfolio_elements/page1_web/projet_impact.png" />
+                <div>
+                    <ProgressiveImg src="/portfolio_elements/page1_web/projet_impact.png" />
+                </div>
             </ProjectImage>
 
         </Projet>
