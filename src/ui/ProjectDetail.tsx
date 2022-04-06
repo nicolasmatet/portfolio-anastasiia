@@ -82,6 +82,7 @@ export function ProjectImage(props: any) {
 }
 
 const ProjectImageWrapper = styled(Stack)(({ theme }) => ({
+    alignItems: 'center',
     backgroundColor: theme.palette.background.paper,
     [theme.breakpoints.up('lg')]: {
         padding: theme.spacing(8)

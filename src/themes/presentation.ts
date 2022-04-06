@@ -6,7 +6,7 @@ export const presentation: ThemeOptions = {
             main: '#FFFFFF',
         },
         secondary: {
-            main: '#000000',
+            main: '#E8F2E7',
         },
         text: {
             primary: '#FFFFFF',

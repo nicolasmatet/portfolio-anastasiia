@@ -1,4 +1,3 @@
-import { Stack } from '@mui/material';
 import * as React from 'react';
 import './App.css';
 import { AppRoutes } from './AppRoutes';

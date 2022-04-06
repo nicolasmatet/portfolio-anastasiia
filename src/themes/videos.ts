@@ -6,7 +6,7 @@ export const videos: ThemeOptions = {
             main: '#826657',
         },
         secondary: {
-            main: '#826657',
+            main: '#E8F2E7',
         },
         text: {
             primary: '#FFFFFF',

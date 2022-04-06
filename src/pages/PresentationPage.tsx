@@ -1,4 +1,4 @@
-import { Button, Stack, ThemeProvider, Typography } from '@mui/material';
+import { Button, Stack, styled, ThemeProvider, Typography } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getTheme } from '../themes/Themes';
@@ -9,6 +9,15 @@ import { SocialLinks } from '../ui/SocialLinks';
 
 
 
+const SocialLinksWrapper = styled(SocialLinks)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+        fontSize: '24px',
+    },
+    [theme.breakpoints.up('sm')]: {
+        fontSize: '32px',
+    },
+    alignItems: "center"
+}));
 
 export function PresentationPage() {
     const theme = getTheme('presentation')
@@ -42,12 +51,12 @@ export function PresentationPage() {
                     et techniques en rejoignant une équipe dynamique, innovante et inspirée par son projet.
                 </Typography>
                 <Stack
-                    direction={{ xs: 'column', sm: 'column', md: 'row' }}
+                    direction={{ xs: 'column', sm: 'column', md: 'column', lg: 'row' }}
                     spacing={{ xs: 2, sm: 2, md: 4 }}
-                    sx={{ display: 'flex' }}>
+                    sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained'>CV</Button>
-                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined' onClick={()=>navigate('/portfolio')}>VOIR PORTFOLIO</Button>
-                    <Stack sx={{ flex: 3, minWidth: "16ch", maxWidth: '24ch' }}><SocialLinks /></Stack>
+                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined' onClick={() => navigate('/portfolio')}>VOIR PORTFOLIO</Button>
+                    <SocialLinksWrapper />
                 </Stack>
             </Stack>
         </SquarePrimary>

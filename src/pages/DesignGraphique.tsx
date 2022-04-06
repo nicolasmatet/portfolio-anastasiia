@@ -11,7 +11,6 @@ export function DesignGraphique() {
     const theme = getTheme('graphique')
     return <ThemeProvider theme={theme}>
         <Header>
-
             <ProgressiveImg src="/portfolio_elements/page3_graphique/design_graphique_letters.png"></ProgressiveImg>
         </Header>
 

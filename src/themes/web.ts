@@ -6,7 +6,7 @@ export const web: ThemeOptions = {
             main: '#658381',
         },
         secondary: {
-            main: '#658381',
+            main: '#E8F2E7',
         },
         text: {
             primary: '#FFFFFF',

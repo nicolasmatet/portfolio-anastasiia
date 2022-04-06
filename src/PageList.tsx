@@ -4,6 +4,7 @@ import { DesignGraphique } from './pages/DesignGraphique';
 import { DesignMobile } from './pages/DesignMobile';
 import { DesignWeb } from './pages/DesignWeb';
 import { Dessins } from './pages/Dessins';
+import { Logos } from './pages/Logos';
 import { Photos } from './pages/Photos';
 import { Videos } from './pages/Videos';
 
@@ -21,7 +22,7 @@ export const PageList = [
         data: { image: '/portfolio_elements/page_portfolio_nav/3 graph.png', title: 'Graphique' }
     },
     {
-        route: { path: '/logos', element: <DesignGraphique /> },
+        route: { path: '/logos', element: <Logos /> },
         data: { image: '/portfolio_elements/page_portfolio_nav/4 logo.png', title: 'Logos' }
     },
     {

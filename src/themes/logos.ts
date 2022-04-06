@@ -1,9 +1,9 @@
 import { ThemeOptions } from "@mui/material";
 
-export const animations: ThemeOptions = {
+export const logos: ThemeOptions = {
     palette: {
         primary: {
-            main: '#7A7182',
+            main: '#658381',
         },
         secondary: {
             main: '#E8F2E7',
@@ -14,7 +14,7 @@ export const animations: ThemeOptions = {
         },
         background: {
             default: '#FFFFFF',
-            paper: '#7A718280',
+            paper: '#65838180',
         }
     }
 };

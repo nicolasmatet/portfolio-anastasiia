@@ -42,9 +42,14 @@ export function Videos() {
             </ProjectDescription>
 
             <ProjectImage>
-                <div>
-                    <ProgressiveImg src="/portfolio_elements/page5_animation/Fromagr gif.gif" />
-                </div>
+
+                <iframe
+                    width="560" height="315" src="https://www.youtube.com/embed/8HNDt_2KDEs"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                </iframe>
+
             </ProjectImage>
         </Projet>
 
@@ -76,9 +81,12 @@ export function Videos() {
             </ProjectDescription>
 
             <ProjectImage>
-                <div>
-                    <ProgressiveImg src="/portfolio_elements/page5_animation/06 Wareframes gif.gif" />
-                </div>
+                <iframe
+                    width="560" height="315" src="https://www.youtube.com/embed/lnd1sQwyU5M"
+                    title="YouTube video player" frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen>
+                </iframe>
             </ProjectImage>
 
         </Projet>

@@ -1,20 +1,20 @@
 import { ThemeOptions } from "@mui/material";
 
-export const animations: ThemeOptions = {
+export const bottomBar: ThemeOptions = {
     palette: {
         primary: {
-            main: '#7A7182',
+            main: '#C4C4C4',
         },
         secondary: {
             main: '#E8F2E7',
         },
         text: {
-            primary: '#FFFFFF',
-            secondary: '#C6977D'
+            primary: '#C4C4C4',
+            secondary: '#C4C4C4'
         },
         background: {
-            default: '#FFFFFF',
-            paper: '#7A718280',
+            default: '#658381',
+            paper: '#658381',
         }
     }
 };

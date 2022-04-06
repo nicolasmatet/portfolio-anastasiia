@@ -1,24 +1,36 @@
-import { Link, Stack } from '@mui/material';
+import { Link, Stack, SvgIcon } from '@mui/material';
 import * as React from 'react';
-import { ProgressiveImg } from '../ui/Image';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
+import { ReactComponent as BehanceImg } from '../../public/portfolio_elements/social_icons/behance.svg';
+
+export function BehanceIcon() {
+    return <SvgIcon fontSize='inherit' component={BehanceImg} viewBox="0 0 576 512" ></SvgIcon>
+}
 
 
-export function SocialLinks() {
-    return <Stack direction="row" style={{ margin: 'auto' }} spacing={2}>
+export function SocialLinks(props: any) {
+    const { style, others } = props;
+    return <Stack direction="row" spacing={2} style={style} {...props}>
         <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_mail.png"></ProgressiveImg>
+            <MailOutlineRoundedIcon fontSize='inherit' />
+        </Link>
+
+        <Link href="">
+            <InstagramIcon fontSize='inherit' />
+        </Link>
+
+        <Link href="">
+            <LinkedInIcon fontSize='inherit' />
+        </Link>
+
+        <Link href="">
+            <PhotoCameraOutlinedIcon fontSize='inherit' />
         </Link>
         <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_instagram.png"></ProgressiveImg>
+            <BehanceIcon />
         </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_linkedin.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_photo.png"></ProgressiveImg>
-        </Link>
-        <Link href="">
-            <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc_behance.png"></ProgressiveImg>
-        </Link>
-    </Stack>;
+    </Stack >;
 }

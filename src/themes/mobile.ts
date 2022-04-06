@@ -6,7 +6,7 @@ export const mobile: ThemeOptions = {
             main: '#7A7182',
         },
         secondary: {
-            main: '#7A7182',
+            main: '#E8F2E7',
         },
         text: {
             primary: '#FFFFFF',
