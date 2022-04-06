@@ -43,7 +43,7 @@ export function DesignMobile() {
 
             <ProjectImage>
                 <div>
-                    <ResponsiveImg src={projet_tomorrow} />
+                    <ResponsiveImg src={projet_thefood} />
                 </div>
             </ProjectImage>
         </Projet>

@@ -79,9 +79,8 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: "public/manifest.json", to: "" },
-                { from: "public/portfolio_elements", to: "portfolio_elements" },
-            ],
+                { from: "public/manifest.json", to: "" }
+                        ],
         })
     ],
     devServer: {

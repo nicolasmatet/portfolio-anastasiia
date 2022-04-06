@@ -13,16 +13,16 @@ export function LandingPage() {
             style={{
                 marginTop: '128px',
             }}>
-            <Stack direction="row" spacing={8}
+            <Stack direction={{ sm: "column", md: "column", lg: "row" }} spacing={{ sm: 4, md: 4, lg: 8 }}
                 style={{
                     margin: 'auto',
                     display: 'flex',
                 }}>
                 <Button variant="outlined" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/presentation' >
-                        ABOUT ME
+                    ABOUT ME
                 </Button>
                 <Button variant="contained" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/portfolio'>
-                        PORTFOLIO
+                    PORTFOLIO
                 </Button>
             </Stack>
         </Stack>

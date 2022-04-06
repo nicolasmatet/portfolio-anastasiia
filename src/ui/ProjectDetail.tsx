@@ -50,7 +50,7 @@ export function Outils(props: any) {
     const { children, other } = props
     return <ProjectDetail title="outils"  {...other}>
         <ToolContainer direction="row" spacing={1}>
-            {React.Children.map(children, (c: any, idx: number) => <div style={{ height: '4ch' }} key={idx}>{c}</div>)}
+            {React.Children.map(children, (c: any, idx: number) => <div style={{ height: '4ch', width: '4ch' }} key={idx}>{c}</div>)}
         </ToolContainer>
     </ProjectDetail >
 }
