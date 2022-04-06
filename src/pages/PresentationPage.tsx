@@ -4,9 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { getTheme } from '../themes/Themes';
 import { CVGrid, CVSquare, SquarePrimary } from '../ui/Cv';
 import { HeaderContainer, Logo } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { SocialLinks } from '../ui/SocialLinks';
 
+import logo from "../../public/portfolio_elements/page_cv/logo_blanc.png"
+import bonjour from "../../public/portfolio_elements/page_cv/bonjour.png"
+import tel from "../../public/portfolio_elements/page_cv/tel_et_photo.png"
 
 
 const SocialLinksWrapper = styled(SocialLinks)(({ theme }) => ({
@@ -25,14 +28,14 @@ export function PresentationPage() {
     return <ThemeProvider theme={theme}>
         <HeaderContainer>
             <Logo onClick={() => navigate('/')}>
-                <ProgressiveImg src="/portfolio_elements/page_cv/logo_blanc.png"></ProgressiveImg>
+                <ResponsiveImg src={logo}></ResponsiveImg>
             </Logo>
         </HeaderContainer>
         <SquarePrimary
             direction={{ xs: 'column-reverse', sm: 'column', md: 'row' }}
             spacing={{ xs: 0, sm: 0, md: 12, lg: 24 }}>
             <Stack sx={{ flex: 1, maxWidth: '30ch' }}>
-                <ProgressiveImg src="/portfolio_elements/page_cv/tel_et_photo.png"></ProgressiveImg>
+                <ResponsiveImg src={tel}></ResponsiveImg>
             </Stack>
             <Stack direction="column"
                 spacing={{ xs: 2, sm: 2, md: 8 }}
@@ -43,7 +46,8 @@ export function PresentationPage() {
                     paddingX: { xs: 2, sm: 2, md: 0 },
                     paddingY: { xs: 2, sm: 2, md: 4 },
                 }}>
-                <ProgressiveImg src="/portfolio_elements/page_cv/bonjour.png"></ProgressiveImg>
+                <ResponsiveImg src={bonjour}></ResponsiveImg>
+
                 <Typography variant='body1' style={{ textAlign: 'justify' }}>
                     Je suis Anastasiia.<br />
                     Après une expérience en tant que UX/UI Designer dans le domaine

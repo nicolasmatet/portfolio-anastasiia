@@ -3,14 +3,17 @@ import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 import { Figma, Illustrator, Wordpress } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import projet_danse_dense from '../../public/portfolio_elements/page1_web/projet_danse_dense.png'
+import projet_impact from '../../public/portfolio_elements/page1_web/projet_impact.png'
+import lettres from "../../public/portfolio_elements/page1_web/design_web_letters.png"
 
 export function DesignWeb() {
     const theme = getTheme('web')
     return <ThemeProvider theme={theme}>
         <Header>
-            <ProgressiveImg src="/portfolio_elements/page1_web/design_web_letters.png"></ProgressiveImg>
+            <ResponsiveImg src={lettres} />
         </Header>
 
         <Projet>
@@ -41,7 +44,7 @@ export function DesignWeb() {
 
             <ProjectImage>
                 <div>
-                    <ProgressiveImg src="/portfolio_elements/page1_web/projet_danse_dense.png" />
+                    <ResponsiveImg src={projet_danse_dense} />
                 </div>
             </ProjectImage>
         </Projet>
@@ -75,7 +78,7 @@ export function DesignWeb() {
 
             <ProjectImage>
                 <div>
-                    <ProgressiveImg src="/portfolio_elements/page1_web/projet_impact.png" />
+                    <ResponsiveImg src={projet_impact} />
                 </div>
             </ProjectImage>
 

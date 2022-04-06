@@ -7,38 +7,47 @@ import { Dessins } from './pages/Dessins';
 import { Logos } from './pages/Logos';
 import { Photos } from './pages/Photos';
 import { Videos } from './pages/Videos';
+import i1 from "../public/portfolio_elements/page_portfolio_nav/1 web.png"
+import i2 from "../public/portfolio_elements/page_portfolio_nav/2 mobile.png"
+import i3 from "../public/portfolio_elements/page_portfolio_nav/3 graph.png"
+import i4 from "../public/portfolio_elements/page_portfolio_nav/4 logo.png"
+import i5 from "../public/portfolio_elements/page_portfolio_nav/5 animation.png"
+import i6 from "../public/portfolio_elements/page_portfolio_nav/6 photo.png"
+import i7 from "../public/portfolio_elements/page_portfolio_nav/7 video.png"
+import i8 from "../public/portfolio_elements/page_portfolio_nav/8 dessin.png"
 
 export const PageList = [
     {
         route: { path: '/web', element: <DesignWeb /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/1 web.png', title: 'WEB Design' }
+        data: { image: i1, title: 'WEB Design' }
     },
     {
         route: { path: '/mobile', element: <DesignMobile /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/2 mobile.png', title: 'Mobile Design' }
+        data: { image: i2, title: 'Mobile Design' }
     },
     {
         route: { path: '/graphique', element: <DesignGraphique /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/3 graph.png', title: 'Graphique' }
+        data: { image: i3, title: 'Graphique' }
     },
     {
         route: { path: '/logos', element: <Logos /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/4 logo.png', title: 'Logos' }
+        data: { image: i4, title: 'Logos' }
     },
     {
         route: { path: '/animations', element: <Animations /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/5 animation.png', title: 'Animations' }
+        data: { image: i5, title: 'Animations' }
     },
     {
         route: { path: '/videos', element: <Videos /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/7 video.png', title: 'Videos' }
+        data: { image: i7, title: 'Videos' }
     },
     {
         route: { path: '/photos', element: <Photos /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/6 photo.png', title: 'Photos' }
+        data: { image: i6, title: 'Photos' }
     },
+
     {
         route: { path: '/dessins', element: <Dessins /> },
-        data: { image: '/portfolio_elements/page_portfolio_nav/8 dessin.png', title: 'Dessins' }
+        data: { image: i8, title: 'Dessins' }
     },
 ]

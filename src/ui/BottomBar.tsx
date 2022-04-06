@@ -4,20 +4,20 @@ import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 import { SocialLinks } from './SocialLinks';
 
-export const BottomBar = styled(BottomBarComposant)(({ theme }) => ({
+export const BottomBarWrapper = styled(Stack)(({ theme }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     height: '72px',
     fontSize: '32px',
-    backgroundColor: theme.palette.background.default
+    backgroundColor: theme.palette.background.paper
 
 }));
 
-function BottomBarComposant(props: any) {
+export function BottomBar(props: any) {
     const theme = getTheme('bottomBar')
     return <ThemeProvider theme={theme}>
-        <Stack {...props} >
+        <BottomBarWrapper >
             <SocialLinks />
-        </Stack>
+        </BottomBarWrapper>
     </ThemeProvider>
 }

@@ -27,7 +27,30 @@ module.exports = {
                 use: ['@svgr/webpack', 'url-loader'],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+                test: /\.(jpe?g|png|webp)$/i,
+                include: [
+                    path.resolve(__dirname, "public/portfolio_elements/design_tools")
+                ],
+                use: {
+                    loader: 'responsive-loader',
+                    options: {
+                        adapter: require('responsive-loader/sharp'),
+                        sizes: [64]
+                    }
+                }
+            },
+            {
+                test: /\.(jpe?g|png|webp)$/i,
+                use: {
+                    loader: 'responsive-loader',
+                    options: {
+                        adapter: require('responsive-loader/sharp'),
+                        sizes: [640, 1200]
+                    }
+                }
+            },
+            {
+                test: /\.(svg|gif|ico)$/,
                 exclude: /node_modules/,
                 use: ['file-loader?name=[name].[ext]']
             }
@@ -45,11 +68,11 @@ module.exports = {
         new HtmlWebPackPlugin({
             template: path.resolve(__dirname, 'public/index.html'),
             filename: 'index.html',
-            title: "Fromagr",
-            meta:{
-                description:"Un site pour choisir ses association de vins et fromages",
+            title: "Portfolio Anastasiia Sokhina",
+            meta: {
+                description: "Un site pour présenter mon portfolio",
                 viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
-                charset:'utf-8',
+                charset: 'utf-8',
             },
             favicon: "./public/favicon/favicon.ico"
 

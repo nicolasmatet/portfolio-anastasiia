@@ -1,4 +1,5 @@
 import { Button, Stack, styled, Typography } from '@mui/material';
+import { spacing } from '@mui/system';
 import * as React from 'react';
 
 
@@ -23,7 +24,7 @@ function ProjectDetail(props: any) {
     const { title, children } = props
     return <Stack direction="column" style={{ flexGrow: 1 }}>
         <Typography variant="h6">{title}</Typography>
-        {children}
+        <p>{children}</p>
     </Stack>
 }
 
@@ -42,16 +43,16 @@ const DetailContainer = styled(Stack)(({ theme }) => ({
 }));
 
 const ToolContainer = styled(Stack)(({ theme }) => ({
-    "& img": { height: "4ch", maxHeight: "4ch" }
+    "& img": { height: "4ch", maxHeight: "4ch" },
 }));
 
 export function Outils(props: any) {
     const { children, other } = props
     return <ProjectDetail title="outils"  {...other}>
         <ToolContainer direction="row" spacing={1}>
-            {React.Children.map(children, (c: any, idx: number) => <div key={idx}>{c}</div>)}
+            {React.Children.map(children, (c: any, idx: number) => <div style={{ height: '4ch' }} key={idx}>{c}</div>)}
         </ToolContainer>
-    </ProjectDetail>
+    </ProjectDetail >
 }
 
 export function Perimetre(props: any) {

@@ -3,14 +3,17 @@ import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 import { AfterEffect, Figma, Illustrator, Premiere } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import lettres from "../../public/portfolio_elements/page4_logos/logos_ lettres.png"
+import projet_tomorrow from "../../public/portfolio_elements/page2_mobile/projet tomorrow.png"
+import jardin_numerique from "../../public/portfolio_elements/page4_logos/projet_jardin_numerique.png"
 
 export function Logos() {
     const theme = getTheme('logos')
     return <ThemeProvider theme={theme}>
         <Header>
-            <ProgressiveImg src="/portfolio_elements/page4_logos/logos_ lettres.png"></ProgressiveImg>
+            <ResponsiveImg src={lettres} />
         </Header>
 
         <Projet>
@@ -41,7 +44,7 @@ export function Logos() {
 
             <ProjectImage>
                 <div>
-                    <ProgressiveImg src="/portfolio_elements/page4_logos/projet_jardin_numerique.png" />
+                    <ResponsiveImg src={jardin_numerique} />
                 </div>
             </ProjectImage>
         </Projet>
@@ -74,7 +77,7 @@ export function Logos() {
 
             <ProjectImage>
                 <div>
-                    <ProgressiveImg src="/portfolio_elements/page2_mobile/projet tomorrow.png" />
+                    <ResponsiveImg src={projet_tomorrow} />
                 </div>
             </ProjectImage>
 

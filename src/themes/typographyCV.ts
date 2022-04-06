@@ -2,7 +2,7 @@ import { TypographyVariantsOptions } from "@mui/material";
 
 
 
-export const typography: TypographyVariantsOptions = {
+export const typographyCV: TypographyVariantsOptions = {
   fontFamily: [
     '-apple-system',
     'BlinkMacSystemFont',
@@ -25,18 +25,15 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 700,
     fontSize: '30px',
     lineHeight: '24px',
-    color: '#96A8A7'
   },
   h4: {
     fontWeight: 700,
     fontSize: '20px',
-    color: 'rgba(16, 45, 41, 0.9)'
   },
   h5: {
     fontWeight: 400,
     fontSize: '16px',
     lineHeight: '140%',
-    color: 'rgba(16, 45, 41, 0.9)'
   },
   h6: {
     fontWeight: 400,
@@ -48,6 +45,5 @@ export const typography: TypographyVariantsOptions = {
     fontWeight: 400,
     fontSize: '16px',
     lineHeight: '140%',
-    color: 'rgba(0, 0, 0, 0.5)'
   }
 } 

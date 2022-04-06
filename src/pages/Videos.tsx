@@ -3,14 +3,14 @@ import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 import { AfterEffect, Camtasia, Figma, Illustrator, Premiere } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
-
+import letters from "../../public/portfolio_elements/page6_videos/VIDEOS lettres.png"
 export function Videos() {
     const theme = getTheme('animations')
     return <ThemeProvider theme={theme}>
         <Header>
-            <ProgressiveImg src="/portfolio_elements/page6_videos/VIDEOS lettres.png"></ProgressiveImg>
+            <ResponsiveImg src={letters}></ResponsiveImg>
         </Header>
 
         <Projet>

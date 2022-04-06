@@ -1,8 +1,10 @@
 import { Stack, styled } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ProgressiveImg } from './Image';
+import { ProgressiveImg, ResponsiveImg } from './Image';
 
+import logo from "../../public/portfolio_elements/logo_as.png"
+import retour from "../../public/portfolio_elements/icone_retour.png"
 
 export const Logo = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
@@ -45,11 +47,11 @@ export function Header(props: any) {
     const navigate = useNavigate()
     return <HeaderContainer direction="row">
         <Logo onClick={() => navigate('/')}>
-            <ProgressiveImg src="/portfolio_elements/logo_as.png" />
+            <ResponsiveImg src={logo} />
         </Logo>
         <Stack direction="row" style={{ alignItems: "center" }}>
             {!hideGoBack && <IconRetourContainer onClick={() => navigate('/portfolio')}>
-                <ProgressiveImg src="/portfolio_elements/icone_retour.png" />
+                <ResponsiveImg src={retour} />
             </IconRetourContainer>}
             <TitleContainer direction="row">
                 {children}

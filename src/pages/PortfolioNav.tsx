@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { PageList } from '../PageList';
 import { getTheme } from '../themes/Themes';
 import { Header } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ResponsiveImg } from '../ui/Image';
+import letters from "../../public/portfolio_elements/page_portfolio_nav/PORTFOLIO lettres.png"
 
 const EntryImageWrapper = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
@@ -29,7 +30,7 @@ const PortfolioNavWrapper = styled(Stack)(({ theme }) => ({
 
 
 const EntryTitleWrapper = styled(Stack)(({ theme }) => ({
-    marginTop: "-2ch",
+    marginTop: "-0.5ch",
 }))
 
 function PortfolioEntry(props: { image: string, title: string, onClick: any }) {
@@ -37,11 +38,11 @@ function PortfolioEntry(props: { image: string, title: string, onClick: any }) {
     return <Stack onClick={onClick}>
         <EntryImageWrapper>
             <div>
-                <ProgressiveImg src={image}></ProgressiveImg>
+                <ResponsiveImg src={image} sizes="(min-width: 1024px) 15vw, 100vw"></ResponsiveImg>
             </div>
         </EntryImageWrapper>
         <EntryTitleWrapper>
-            <Typography variant='h4'>
+            <Typography variant='caption'>
                 {title}
             </Typography>
         </EntryTitleWrapper>
@@ -58,11 +59,11 @@ export function PortfolioNav() {
     const entries = entriesData.map((entriesDataInRow, rowIdx) => {
         const entriesInRow = entriesDataInRow.map(
             (entryData) => <PortfolioEntry onClick={() => navigate(entryData.route.path)} key={entryData.route.path} {...entryData.data} />)
-        return <Stack key={rowIdx} direction={{ xs: "column", sm: "column", md: "column", lg:"row" }} spacing={4}>{...entriesInRow}</Stack>
+        return <Stack key={rowIdx} direction={{ xs: "column", sm: "column", md: "column", lg: "row" }} spacing={4}>{...entriesInRow}</Stack>
     })
     return <ThemeProvider theme={theme}>
         <Header hideGoBack>
-            <ProgressiveImg src="/portfolio_elements/page_portfolio_nav/PORTFOLIO lettres.png"></ProgressiveImg>
+            <ResponsiveImg src={letters}></ResponsiveImg>
         </Header>
         <PortfolioNavWrapper direction="column" spacing={4}>
             {...entries}

@@ -13,8 +13,8 @@ export const bottomBar: ThemeOptions = {
             secondary: '#C4C4C4'
         },
         background: {
-            default: '#658381',
-            paper: '#658381',
+            default: '#E8F2E7',
+            paper: '#E8F2E7',
         }
     }
 };
