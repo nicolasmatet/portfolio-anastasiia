@@ -13,7 +13,7 @@ export function LandingPage() {
             style={{
                 marginTop: '128px',
             }}>
-            <Stack direction={{ sm: "column", md: "column", lg: "row" }} spacing={{ sm: 4, md: 4, lg: 8 }}
+            <Stack direction={{ xs: "column", sm: "column", md: "column", lg: "row" }} spacing={{ xs: 4, sm: 4, md: 4, lg: 8 }}
                 style={{
                     margin: 'auto',
                     display: 'flex',

@@ -36,13 +36,16 @@ const TitleContainer = styled(Stack)(({ theme }) => ({
 const IconRetourContainer = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
     [theme.breakpoints.down('sm')]: {
-        maxHeight: '3ch',
+        maxHeight: '2.5ch',
+        maxWidth: '2.5ch',
+        marginRight: theme.spacing(1)
     },
     [theme.breakpoints.up('sm')]: {
         maxHeight: '5ch',
+        maxWidth: '5ch',
+        marginRight: theme.spacing(2)
+
     },
-    maxWidth: '5ch',
-    marginRight: '2ch'
 
 }));
 

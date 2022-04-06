@@ -1,16 +1,17 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
-import { AfterEffect, Figma, Illustrator, Premiere } from '../ui/DesignTools';
+import { AfterEffect, Figma, Illustrator } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg } from '../ui/Image';
+import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import letters from "../../public/portfolio_elements/page5_animation/ANIMATION lettres.png"
 
-export function Animations(props: any) {
+export function Animations() {
     const theme = getTheme('animations')
     return <ThemeProvider theme={theme}>
         <Header>
-            <ProgressiveImg src="/portfolio_elements/page5_animation/ANIMATION lettres.png"></ProgressiveImg>
+            <ResponsiveImg src={letters}></ResponsiveImg>
         </Header>
 
         <Projet>
@@ -47,13 +48,6 @@ export function Animations(props: any) {
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
                 </iframe>
-            </ProjectImage>
-
-
-            <ProjectImage>
-                <div>
-                    <ProgressiveImg src="/portfolio_elements/page5_animation/Fromagr gif.gif" />
-                </div>
             </ProjectImage>
         </Projet>
 
