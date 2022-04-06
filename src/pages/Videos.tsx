@@ -44,12 +44,11 @@ export function Videos() {
             <ProjectImage>
 
                 <iframe
-                    width="560" height="315" src="https://www.youtube.com/embed/8HNDt_2KDEs"
+                    width="560" height="315" src="https://www.youtube.com/embed/cii-VNN3gtk"
                     title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
                 </iframe>
-
             </ProjectImage>
         </Projet>
 
@@ -82,7 +81,7 @@ export function Videos() {
 
             <ProjectImage>
                 <iframe
-                    width="560" height="315" src="https://www.youtube.com/embed/lnd1sQwyU5M"
+                    width="560" height="315" src="https://www.youtube.com/embed/HEB-k4Swsc0"
                     title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
@@ -92,4 +91,4 @@ export function Videos() {
         </Projet>
 
     </ThemeProvider>
-}
+}  
