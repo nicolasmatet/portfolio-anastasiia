@@ -36,8 +36,8 @@ const TitleContainer = styled(Stack)(({ theme }) => ({
 const IconRetourContainer = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',
     [theme.breakpoints.down('sm')]: {
-        maxHeight: '2.5ch',
-        maxWidth: '2.5ch',
+        maxHeight: '4ch',
+        maxWidth: '4ch',
         marginRight: theme.spacing(1)
     },
     [theme.breakpoints.up('sm')]: {
@@ -53,7 +53,7 @@ const IconRetourContainer = styled(Stack)(({ theme }) => ({
 export function Header(props: any) {
     const { children, hideGoBack } = props
     const navigate = useNavigate()
-    return <HeaderContainer direction="row">
+    return <HeaderContainer direction={{ xs: "column", sm: "column", md: "row" }} spacing={{ xs: 2, sm: 2, md: 0 }}>
         <Logo onClick={() => navigate('/')}>
             <ResponsiveImg src={logo} />
         </Logo>

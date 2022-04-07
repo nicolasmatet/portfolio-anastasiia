@@ -14,6 +14,7 @@ import tel from "../../public/portfolio_elements/page_cv/tel_et_photo.png"
 
 const SocialLinksWrapper = styled(SocialLinks)(({ theme }) => ({
     [theme.breakpoints.down('sm')]: {
+        paddingTop: theme.spacing(1),
         fontSize: '24px',
     },
     [theme.breakpoints.up('sm')]: {
@@ -38,7 +39,7 @@ export function PresentationPage() {
                 <ResponsiveImg src={tel}></ResponsiveImg>
             </Stack>
             <Stack direction="column"
-                spacing={{ xs: 2, sm: 2, md: 8 }}
+                spacing={{ xs: 4, sm: 4, md: 8 }}
                 sx={{
                     flex: 2,
                     flexGrow: 1,

@@ -34,11 +34,11 @@ export function Dessins() {
         ]
     ]
     const rows = images.map((imagesInRow, idxRow) => {
-        const images = imagesInRow.map((src, idx) => <div style={{ flex: 10 }} key={idx + '-' + idxRow}>
+        const images = imagesInRow.map((src, idx) => <div key={idx + '-' + idxRow}>
             <ResponsiveImg src={src} sizes="(min-width: 1024px) 25vw, 100vw"></ResponsiveImg></div>)
         if (idxRow % 2) {
             images.unshift(<div style={{ flex: 2 }}></div>)
-            images.push(<div style={{ flexGrow: 2 }}></div>)
+            images.push(<div style={{ flex: 2 }}></div>)
         }
         return <Row key={idxRow} direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row' }} spacing={{ xs: 4, sm: 4, md: 8 }}>{...images} </Row>
     })

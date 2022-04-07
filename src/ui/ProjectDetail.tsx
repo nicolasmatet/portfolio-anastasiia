@@ -43,14 +43,14 @@ const DetailContainer = styled(Stack)(({ theme }) => ({
 }));
 
 const ToolContainer = styled(Stack)(({ theme }) => ({
-    "& img": { height: "4ch", maxHeight: "4ch" },
+    "& img": { height: "4ch", maxHeight: "4ch", width: 'unset' },
 }));
 
 export function Outils(props: any) {
     const { children, other } = props
     return <ProjectDetail title="outils"  {...other}>
         <ToolContainer direction="row" spacing={1}>
-            {React.Children.map(children, (c: any, idx: number) => <div style={{ height: '4ch', width: '4ch' }} key={idx}>{c}</div>)}
+            {React.Children.map(children, (c: any, idx: number) => <div style={{ height: '4ch' }} key={idx}>{c}</div>)}
         </ToolContainer>
     </ProjectDetail >
 }
@@ -101,7 +101,7 @@ export function ProjectDescription(props: any) {
     const details = children.filter((c: any) => c.props.category === "detail")
     const others = children.filter((c: any) => c.props.category != "detail")
 
-    const seeMore = url ? <Button variant='contained' style={{ width: '32ch', flexGrow: 0 }}>Voir plus</Button> : <></>
+    const seeMore = <Button variant='contained' sx={{ paddingX: 4, width:{xs:'100%', sm:'100%', md:'40%'} }}>Voir plus</Button>
     return <Stack>
         <ProjectDescriptionWrapper spacing={4}>
             {others}
@@ -109,7 +109,7 @@ export function ProjectDescription(props: any) {
                 {details}
                 <Stack style={{ flexGrow: 1 }} />
             </DetailContainer>
-            {seeMore}
+            {url && seeMore}
         </ProjectDescriptionWrapper>
     </Stack>
 }
