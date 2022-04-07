@@ -6,7 +6,7 @@ import { Header } from '../ui/Header';
 import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
 import lettres from "../../public/portfolio_elements/page4_logos/logos_ lettres.png"
-import projet_tomorrow from "../../public/portfolio_elements/page2_mobile/projet tomorrow.png"
+import projet_tomorrow from "../../public/portfolio_elements/page4_logos/projet_logos.png"
 import jardin_numerique from "../../public/portfolio_elements/page4_logos/projet_jardin_numerique.png"
 
 export function Logos() {
