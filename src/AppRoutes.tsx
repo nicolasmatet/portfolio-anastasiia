@@ -16,6 +16,7 @@ export function AppRoutes() {
         <Route path={'/presentation'} element={<><PresentationPage /> <BottomBar /></>} />
         <Route path={'/portfolio'} element={<PortfolioNav />} />
         {...sections}
+        <Route path="/*" element={<LandingPage />} />
     </Routes>
 
 }
