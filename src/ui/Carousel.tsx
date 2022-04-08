@@ -89,6 +89,7 @@ const ModalWrapper = styled(Box)(({ theme }) => ({
     boxShadow: '24px',
     maxHeight: '100%',
     overflowY: 'auto',
+    backgroundColor:'#FFFFFF',
     [theme.breakpoints.down('md')]: {
         maxWidth: '100%',
         width: '100%'
