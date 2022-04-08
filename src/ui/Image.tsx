@@ -31,8 +31,10 @@ export function ProgressiveImg(props: any) {
     )
 }
 
+export const ResponsiveImgContext = React.createContext({ sizes: '100vw' });
+
 export function ResponsiveImg(props: any) {
-    const { style, src, others, sizes } = props
+    const { style, src, others } = props
     const theme = useTheme()
     const [loaded, setLoaded] = React.useState(false)
     const [innerStyle, setInnerStyle] = React.useState({
@@ -52,21 +54,24 @@ export function ResponsiveImg(props: any) {
         }
     }, [loaded])
 
-    const reactiveSizes = sizes ? sizes : '(min-width: 1024px) 50vw, 100vw'
     return (
+        <ResponsiveImgContext.Consumer>
+            {({ sizes }) => (
+                <picture>
+                    <source srcSet={src.srcSet} type='image/webp' />
+                    <img
+                        src={src.src}
+                        srcSet={src.srcSet}
+                        width={src.width}
+                        height={src.height}
+                        onLoad={() => setLoaded(true)}
+                        style={innerStyle}
+                        sizes={sizes ? sizes : '(min-width: 1024px) 50vw, 100vw'}
+                        {...others}
+                    />
+                </picture>
+            )}
 
-        <picture>
-            <source srcSet={src.srcSet} type='image/webp' />
-            <img
-                src={src.src}
-                srcSet={src.srcSet}
-                width={src.width}
-                height={src.height}
-                onLoad={() => setLoaded(true)}
-                style={innerStyle}
-                sizes={reactiveSizes}
-                {...others}
-            />
-        </picture>
+        </ResponsiveImgContext.Consumer>
     )
 }
