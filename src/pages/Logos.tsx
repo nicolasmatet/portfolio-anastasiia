@@ -17,7 +17,8 @@ export function Logos() {
         </Header>
 
         <Projet>
-            <ProjectDescription url="/">
+            {/* jardins numeriques */}
+            <ProjectDescription url="https://www.behance.net/gallery/107132105/Branding-UI-Design-Les-Jardins-Numrique">
                 <APropos>
 
                     Ce projet a été réalisé dans le cadre d'un cours de graphisme pour l'association Les Jardins numériques.<br></br>
@@ -51,7 +52,7 @@ export function Logos() {
 
         <Projet reverse>
 
-            <ProjectDescription url="/">
+            <ProjectDescription>
                 <APropos>
                     La création d'un logo est un élément essentiel de l'image d'une entreprise. J'ai travaillé sur l'image de marque d'entreprises dans différents domaines.
                 </APropos>

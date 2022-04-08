@@ -17,7 +17,8 @@ export function DesignMobile() {
         </Header>
 
         <Projet>
-            <ProjectDescription url="/">
+            {/* the food */}
+            <ProjectDescription url="https://www.behance.net/gallery/140375033/TheFood-App-UXUI-Design">
                 <APropos>
                     Ce travail a été réalisé dans le cadre d'une formation en web design.  J'ai procédé à une refonte du projet proposé.<br></br>
                     <br></br>
@@ -52,6 +53,7 @@ export function DesignMobile() {
 
 
             <ProjectDescription url="/">
+                {/* tomorrow */}
                 <APropos>
 
                     Ce projet est mon idée d'application, inspirée par un horoscope.<br></br>

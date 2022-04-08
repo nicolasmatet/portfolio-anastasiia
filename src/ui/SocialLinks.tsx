@@ -14,22 +14,22 @@ export function BehanceIcon() {
 export function SocialLinks(props: any) {
     const { style, others } = props;
     return <Stack direction="row" spacing={2} style={style} {...props}>
-        <Link href="">
+        <Link href="anastasiia.sokhina@gmail.com">
             <MailOutlineRoundedIcon fontSize='inherit' />
         </Link>
 
-        <Link href="">
+        <Link href="https://www.instagram.com/nastieth/">
             <InstagramIcon fontSize='inherit' />
         </Link>
 
-        <Link href="">
+        <Link href="https://www.linkedin.com/in/anastasiia-sokhina-00a36917b/">
             <LinkedInIcon fontSize='inherit' />
         </Link>
 
-        <Link href="">
+        <Link href="https://500px.com/p/adresvnikuda?view=photos">
             <PhotoCameraOutlinedIcon fontSize='inherit' />
         </Link>
-        <Link href="">
+        <Link href="https://www.behance.net/anastasiiasokhina">
             <BehanceIcon />
         </Link>
     </Stack >;
