@@ -6,7 +6,7 @@ export const graphique: ThemeOptions = {
             main: '#826657',
         },
         secondary: {
-            main: '#E8F2E7',
+            main: '#826657',
         },
         text: {
             primary: '#FFFFFF',

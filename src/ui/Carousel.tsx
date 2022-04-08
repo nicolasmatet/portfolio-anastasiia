@@ -1,4 +1,4 @@
-import { Button, Fade, IconButton, Slide, Stack, styled } from '@mui/material';
+import { Box, Button, Fade, IconButton, Modal, Slide, Stack, styled, Typography, useTheme } from '@mui/material';
 import * as React from 'react';
 import HorizontalRuleRoundedIcon from '@mui/icons-material/HorizontalRuleRounded';
 import ArrowBackIosNewRoundedIcon from '@mui/icons-material/ArrowBackIosNewRounded';
@@ -60,6 +60,7 @@ const CarouselIndicatorWrapper = styled(Stack)(({ theme }) => ({
 }));
 
 function CarouselIndicators(props: any) {
+    const theme = useTheme()
     const { slides, selected, onClick } = props
     return <>
         <Stack style={{ flexGrow: 10 }}></Stack>
@@ -68,7 +69,7 @@ function CarouselIndicators(props: any) {
                 <CarouselIndicator key={idx} onClick={() => onClick(idx)} style={{ color: "#FFFFFF", }}>
                     <HorizontalRuleRoundedIcon fontSize="inherit" />
                 </CarouselIndicator>
-                : <CarouselIndicator key={idx} onClick={() => onClick(idx)}>
+                : <CarouselIndicator key={idx} onClick={() => onClick(idx)} style={{ color: theme.palette.secondary.main, }}>
                     <HorizontalRuleRoundedIcon fontSize="inherit" />
                 </CarouselIndicator>)
         }
@@ -78,19 +79,44 @@ function CarouselIndicators(props: any) {
 }
 
 export function Carousel(props: any) {
-    const { children } = props
+    const { children, onClickSlide } = props
+
+    const [modalOpen, setModalOpen] = React.useState(false);
+    const handleModalOpen = () => setModalOpen(true);
+    const handleModalClose = () => setModalOpen(false);
+
+    const carousel = <CarouselBase slides={children} onClickSlide={handleModalOpen}></CarouselBase>
+    const CarouselForModal = React.forwardRef((props: any, ref) => <CarouselBase role="modal" {...props} ref={ref}></CarouselBase>);
+    CarouselForModal.displayName = "CarouselForModal";
+
+    const modal = <Modal open={modalOpen}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description" >
+        <CarouselForModal slides={children} />
+    </Modal>
+    return <>
+        {carousel}
+        {modal}
+    </>
+}
+export function CarouselBase(props: any) {
+    const { slides, onClickSlide } = props
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [slideIn, setSlideIn] = React.useState(true);
     const [slideDirection, setSlideDirection] = React.useState<"up" | "down" | "right" | "left" | undefined>('down');
 
     const jumpToSlide = (newIndex: number) => {
+        if (newIndex === currentSlide) {
+            return
+        }
         const direction = newIndex > currentSlide ? 'right' : 'left';
         animateSlides(direction, newIndex)
     }
 
     const toSlide = (increment: number) => {
         const direction = increment > 0 ? 'right' : 'left';
-        const newIndex = (currentSlide + increment + children.length) % children.length;
+        const newIndex = (currentSlide + increment + slides.length) % slides.length;
         animateSlides(direction, newIndex)
     }
 
@@ -104,22 +130,22 @@ export function Carousel(props: any) {
             setSlideIn(true);
         }, 250);
     }
-
     return <CarouselWrapper direction="row">
         <NavWrapper onClick={() => toSlide(-1)}>
             <ArrowBackIosNewRoundedIcon />
         </NavWrapper>
-        <ContentWrapper >
-            <Slide in={slideIn} direction={slideDirection} timeout={125}>
-                {children[currentSlide]}
+        <ContentWrapper>
+            <Slide in={slideIn} direction={slideDirection} timeout={125} onClick={onClickSlide}>
+                {slides[currentSlide]}
             </Slide>
             <CarouselIndicatorWrapper>
-                <CarouselIndicators slides={children} selected={currentSlide} onClick={jumpToSlide} />
+                <CarouselIndicators slides={slides} selected={currentSlide} onClick={jumpToSlide} />
             </CarouselIndicatorWrapper>
         </ContentWrapper>
         <NavWrapper onClick={() => toSlide(1)}>
             <ArrowForwardIosRoundedIcon />
         </NavWrapper>
     </CarouselWrapper>
+
 
 }
