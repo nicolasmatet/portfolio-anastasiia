@@ -79,8 +79,9 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: "public/manifest.json", to: "" }
-                        ],
+                { from: "public/manifest.json", to: "" },
+                { from: "public/cv_anastasiia_sokhina.pdf", to: "" }
+            ],
         })
     ],
     devServer: {

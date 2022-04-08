@@ -1,10 +1,10 @@
-import { Button, Stack, styled, ThemeProvider, Typography } from '@mui/material';
+import { Button, Stack, styled, ThemeProvider, Typography, Link } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { getTheme } from '../themes/Themes';
 import { CVGrid, CVSquare, SquarePrimary } from '../ui/Cv';
 import { HeaderContainer, Logo } from '../ui/Header';
-import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
+import { ResponsiveImg } from '../ui/Image';
 import { SocialLinks } from '../ui/SocialLinks';
 
 import logo from "../../public/portfolio_elements/page_cv/logo_blanc.png"
@@ -26,6 +26,12 @@ const SocialLinksWrapper = styled(SocialLinks)(({ theme }) => ({
 export function PresentationPage() {
     const theme = getTheme('presentation')
     const navigate = useNavigate()
+    const cvRef = React.useRef<any>(null);
+    const clickCvLink = () => {
+        if (cvRef && cvRef.current) {
+            cvRef.current.click()
+        }
+    }
     return <ThemeProvider theme={theme}>
         <HeaderContainer>
             <Logo onClick={() => navigate('/')}>
@@ -59,7 +65,8 @@ export function PresentationPage() {
                     direction={{ xs: 'column', sm: 'column', md: 'column', lg: 'row' }}
                     spacing={{ xs: 2, sm: 2, md: 4 }}
                     sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained'>CV</Button>
+                    <Link href="/cv_anastasiia_sokhina.pdf" style={{ display: 'none' }} ref={cvRef}>Download</Link>
+                    <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained' onClick={clickCvLink}>CV</Button>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined' onClick={() => navigate('/portfolio')}>VOIR PORTFOLIO</Button>
                     <SocialLinksWrapper />
                 </Stack>
