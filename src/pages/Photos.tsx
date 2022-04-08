@@ -4,49 +4,49 @@ import { getTheme } from '../themes/Themes';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
 import { PhotoList, Row } from '../ui/PhotoList';
-import p1 from "../../public/portfolio_elements/page7_photos/1.jpg"
-import p2 from "../../public/portfolio_elements/page7_photos/2.jpg"
-import p3 from "../../public/portfolio_elements/page7_photos/3.jpg"
-import p4 from "../../public/portfolio_elements/page7_photos/4.jpg"
-import p5 from "../../public/portfolio_elements/page7_photos/5.jpg"
-import p6 from "../../public/portfolio_elements/page7_photos/6.jpg"
-import p7 from "../../public/portfolio_elements/page7_photos/7.jpg"
-import p8 from "../../public/portfolio_elements/page7_photos/8.jpg"
-import p9 from "../../public/portfolio_elements/page7_photos/9.jpg"
-import p10 from "../../public/portfolio_elements/page7_photos/10.jpg"
-import p11 from "../../public/portfolio_elements/page7_photos/11.jpg"
-import p12 from "../../public/portfolio_elements/page7_photos/12.jpg"
-import p13 from "../../public/portfolio_elements/page7_photos/13.jpg"
-import p14 from "../../public/portfolio_elements/page7_photos/14.jpg"
-import p15 from "../../public/portfolio_elements/page7_photos/15.jpg"
-import p16 from "../../public/portfolio_elements/page7_photos/16.jpg"
-import p17 from "../../public/portfolio_elements/page7_photos/17.jpg"
-import p18 from "../../public/portfolio_elements/page7_photos/18.jpg"
+import p0 from "../../public/portfolio_elements/page7_photos/000.jpg"
+import p1 from "../../public/portfolio_elements/page7_photos/000.jpg"
+import p2 from "../../public/portfolio_elements/page7_photos/002.jpg"
+import p3 from "../../public/portfolio_elements/page7_photos/003.jpg"
+import p4 from "../../public/portfolio_elements/page7_photos/004.jpg"
+import p5 from "../../public/portfolio_elements/page7_photos/005.jpg"
+import p6 from "../../public/portfolio_elements/page7_photos/006.jpg"
+import p7 from "../../public/portfolio_elements/page7_photos/007.jpg"
+import p8 from "../../public/portfolio_elements/page7_photos/008.jpg"
+import p9 from "../../public/portfolio_elements/page7_photos/009.jpg"
+import p10 from "../../public/portfolio_elements/page7_photos/010.jpg"
+import p11 from "../../public/portfolio_elements/page7_photos/011.jpg"
+import p12 from "../../public/portfolio_elements/page7_photos/012.jpg"
+import p13 from "../../public/portfolio_elements/page7_photos/013.jpg"
+import p14 from "../../public/portfolio_elements/page7_photos/014.jpg"
+import p15 from "../../public/portfolio_elements/page7_photos/015.jpg"
+import p16 from "../../public/portfolio_elements/page7_photos/016.jpg"
+import p17 from "../../public/portfolio_elements/page7_photos/017.jpg"
 import lettres from "../../public/portfolio_elements/page7_photos/PHOTOS lettres.png"
 
 export function Photos() {
     const theme = getTheme('web')
     const images = [
         [
-            p1, p2, p3
+            p0, p1, p2
         ],
         [
-            p4, p5
+            p3, p4
         ],
         [
-            p6, p7, p8
+            p5, p6, p7
         ],
         [
-            p9, p10
+            p8, p9
         ],
         [
-            p11, p12, p13
+            p10, p11, p12
         ],
         [
-            p14, p15
+            p13, p14
         ],
         [
-            p16, p17, p18
+            p15, p16, p17
         ]
     ]
     const rows = images.map((imagesInRow, idxRow) => {
