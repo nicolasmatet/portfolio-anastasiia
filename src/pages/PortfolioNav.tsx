@@ -25,7 +25,13 @@ const PortfolioNavWrapper = styled(Stack)(({ theme }) => ({
     overflow: 'hidden',
     flexWrap: "wrap",
     justifyContent: "start",
-    alignItems: 'center'
+    alignItems: 'center',
+    [theme.breakpoints.up('md')]: {
+        paddingBottom: theme.spacing(4)
+    },
+    [theme.breakpoints.down('md')]: {
+        paddingBottom: theme.spacing(2)
+    },
 }))
 
 

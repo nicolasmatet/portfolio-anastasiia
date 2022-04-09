@@ -4,7 +4,7 @@ import { getTheme } from '../themes/Themes';
 import { AfterEffect, Camtasia, Figma, Illustrator, Premiere } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
-import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, ProjectVideo, Projet, TravailRealise } from '../ui/ProjectDetail';
 import letters from "../../public/portfolio_elements/page6_videos/VIDEOS lettres.png"
 export function Videos() {
     const theme = getTheme('animations')
@@ -41,15 +41,14 @@ export function Videos() {
                 </Date>
             </ProjectDescription>
 
-            <ProjectImage>
-
+            <ProjectVideo>
                 <iframe
-                    width="560" height="315" src="https://www.youtube.com/embed/cii-VNN3gtk"
+                    width="100%" height="100%" src="https://www.youtube.com/embed/cii-VNN3gtk"
                     title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
                 </iframe>
-            </ProjectImage>
+            </ProjectVideo>
         </Projet>
 
         <Projet reverse>
@@ -79,14 +78,14 @@ export function Videos() {
                 </Date>
             </ProjectDescription>
 
-            <ProjectImage>
+            <ProjectVideo>
                 <iframe
-                    width="560" height="315" src="https://www.youtube.com/embed/HEB-k4Swsc0"
+                    width="100%" height="100%" src="https://www.youtube.com/embed/HEB-k4Swsc0"
                     title="YouTube video player" frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen>
                 </iframe>
-            </ProjectImage>
+            </ProjectVideo>
 
         </Projet>
 

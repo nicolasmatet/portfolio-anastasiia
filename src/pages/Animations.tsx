@@ -4,7 +4,7 @@ import { getTheme } from '../themes/Themes';
 import { AfterEffect, Figma, Illustrator } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
-import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, ProjectVideo, Projet, TravailRealise } from '../ui/ProjectDetail';
 import letters from "../../public/portfolio_elements/page5_animation/ANIMATION lettres.png"
 
 export function Animations() {
@@ -41,14 +41,14 @@ export function Animations() {
                 </Date>
             </ProjectDescription>
 
-            <ProjectImage>
+            <ProjectVideo>
                 <iframe
-                    width="560" height="315" src="https://www.youtube.com/embed/LlkLujvfkz0"
+                    width="100%" height="100%" src="https://www.youtube.com/embed/LlkLujvfkz0?autoplay=1&origin=https://anastasiia.fr/"
                     title="YouTube video player" frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; gyroscope"
                     allowFullScreen>
                 </iframe>
-            </ProjectImage>
+            </ProjectVideo>
         </Projet>
 
         <Projet reverse>

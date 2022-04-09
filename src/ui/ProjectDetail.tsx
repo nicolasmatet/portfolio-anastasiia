@@ -1,4 +1,4 @@
-import { Button, Link, Stack, styled, Typography } from '@mui/material';
+import { Button, Link, Stack, styled, Typography, useTheme } from '@mui/material';
 import { spacing } from '@mui/system';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -78,14 +78,34 @@ const ProjectDescriptionWrapper = styled(Stack)(({ theme }) => ({
     }
 }));
 
-export function ProjectImage(props: any) {
-    const { children } = props;
-    return <Stack><ProjectImageWrapper>{children}</ProjectImageWrapper></Stack >
-}
+export const ProjectVideoWrapper = styled(Stack)(({ theme }) => ({
+    [theme.breakpoints.down('sm')]: {
+        maxWidth: 280,
+        maxHeight: 157,
+        width: 280,
+        height: 157
+    },
+    [theme.breakpoints.up('sm')]: {
+        maxWidth: 560,
+        maxHeight: 315,
+        width: 560,
+        height: 315
+    },
+    [theme.breakpoints.only('lg')]: {
+        maxWidth: 400,
+        maxHeight: 225,
+        width: 400,
+        height: 225
+    },
+    [theme.breakpoints.up('lg')]: {
+        maxWidth: 784,
+        maxHeight: 441,
+        width: 896,
+        height: 504
+    }
+}));
 
 const ProjectImageWrapper = styled(Stack)(({ theme }) => ({
-    alignItems: 'center',
-    backgroundColor: theme.palette.background.paper,
     [theme.breakpoints.up('lg')]: {
         padding: theme.spacing(8)
     },
@@ -96,6 +116,23 @@ const ProjectImageWrapper = styled(Stack)(({ theme }) => ({
         padding: theme.spacing(1)
     }
 }));
+
+export function ProjectVideo(props: any) {
+    const theme = useTheme();
+    const { children } = props;
+    return <Stack sx={{ alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.background.paper }}>
+        <ProjectVideoWrapper>{children}</ProjectVideoWrapper>
+    </Stack >
+}
+export function ProjectImage(props: any) {
+    const theme = useTheme();
+    const { children } = props;
+    return <Stack sx={{ alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.background.paper }}>
+        <ProjectImageWrapper>{children}</ProjectImageWrapper>
+    </Stack >
+}
+
+
 
 export function ProjectDescription(props: any) {
     const { url, children } = props

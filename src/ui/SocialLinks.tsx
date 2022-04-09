@@ -14,7 +14,7 @@ export function BehanceIcon() {
 export function SocialLinks(props: any) {
     const { style, others } = props;
     return <Stack direction="row" spacing={2} style={style} {...props}>
-        <Link href="anastasiia.sokhina@gmail.com">
+        <Link href="mailto:anastasiia.sokhina@gmail.com">
             <MailOutlineRoundedIcon fontSize='inherit' />
         </Link>
 

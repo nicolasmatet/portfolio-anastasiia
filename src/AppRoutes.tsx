@@ -19,22 +19,13 @@ function ScrollToTop() {
 }
 
 
-function ScrollToTopOnMount() {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
-    return null;
-}
-
-
 export function AppRoutes() {
     const sections = PageList.map(entry => {
         return <Route
             key={entry.route.path}
             path={entry.route.path}
             element={<>
-                <ScrollToTopOnMount />
+                <ScrollToTop />
                 {entry.route.element}
                 <BottomBar />
             </>} />
@@ -46,10 +37,10 @@ export function AppRoutes() {
     const presentation = <>
         <ScrollToTop />
         <PresentationPage />
-        <BottomBar />
     </>
     const portfolionav = <>
         <PortfolioNav />
+        <BottomBar />
     </>
     return <Routes>
         <Route path={'/landing'} element={landing} />
