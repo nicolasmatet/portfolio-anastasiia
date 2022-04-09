@@ -10,7 +10,7 @@ export function ProgressiveImg(props: any) {
         opacity: 0,
         transition: theme.transitions.create('opacity', {
             duration: theme.transitions.duration.standard,
-        }),
+        })
     })
     React.useEffect(() => {
         if (loaded) {
@@ -57,16 +57,16 @@ export function ResponsiveImg(props: any) {
     return (
         <ResponsiveImgContext.Consumer>
             {({ sizes }) => (
-                    <img
-                        src={src.src}
-                        srcSet={src.srcSet}
-                        width={src.width}
-                        height={src.height}
-                        onLoad={() => setLoaded(true)}
-                        style={innerStyle}
-                        sizes={sizes}
-                        {...others}
-                    />
+                <img
+                    src={src.src}
+                    srcSet={src.srcSet}
+                    width={src.width}
+                    height={src.height}
+                    onLoad={() => setLoaded(true)}
+                    style={innerStyle}
+                    sizes={sizes}
+                    {...others}
+                />
             )}
 
         </ResponsiveImgContext.Consumer>

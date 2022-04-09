@@ -89,7 +89,7 @@ const ModalWrapper = styled(Box)(({ theme }) => ({
     boxShadow: '24px',
     maxHeight: '100%',
     overflowY: 'auto',
-    backgroundColor:'#FFFFFF',
+    backgroundColor: '#FFFFFF',
     [theme.breakpoints.down('md')]: {
         maxWidth: '100%',
         width: '100%'
@@ -108,8 +108,9 @@ export function Carousel(props: any) {
     const [modalOpen, setModalOpen] = React.useState(false);
     const handleModalOpen = () => setModalOpen(true);
     const handleModalClose = () => setModalOpen(false);
-
-    const carousel = <CarouselBase {...props} onClickSlide={handleModalOpen}></CarouselBase>
+    const { style, children, others } = props;
+    const baseStyle = { ...style, ...{ cursor: 'pointer' } }
+    const carousel = <CarouselBase {...others} style={baseStyle} onClickSlide={handleModalOpen}>{children}</CarouselBase>
     const CarouselForModal = React.forwardRef((props: any, ref) => <CarouselBase role="modal" {...props} ref={ref}></CarouselBase>);
     CarouselForModal.displayName = "CarouselForModal";
 
@@ -121,7 +122,7 @@ export function Carousel(props: any) {
     >
         <ResponsiveImgContext.Provider value={{ sizes: '10000px' }}>
             <ModalWrapper >
-                <CarouselForModal {...props} />
+                <CarouselForModal {...others} style={style} >{children}</CarouselForModal>
             </ModalWrapper>
         </ResponsiveImgContext.Provider>
     </Modal>
@@ -131,7 +132,7 @@ export function Carousel(props: any) {
     </>
 }
 export function CarouselBase(props: any) {
-    const { children, onClickSlide } = props
+    const { children, onClickSlide, style } = props
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [slideIn, setSlideIn] = React.useState(true);
     const [slideDirection, setSlideDirection] = React.useState<"up" | "down" | "right" | "left" | undefined>('down');
@@ -172,7 +173,7 @@ export function CarouselBase(props: any) {
         trackMouse: true
     });
 
-    return <CarouselWrapper direction="row">
+    return <CarouselWrapper direction="row" style={style}>
         <NavWrapper onClick={() => toSlide(-1)}>
             <ArrowBackIosNewRoundedIcon />
         </NavWrapper>

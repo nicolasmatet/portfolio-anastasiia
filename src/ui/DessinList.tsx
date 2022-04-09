@@ -9,7 +9,7 @@ export const Row = styled(Stack)(({ theme }) => ({
 }))
 
 export const DessinList = styled(Stack)(({ theme }) => ({
-    padding: theme.spacing(8),
+    padding: theme.spacing(4),
     alignItems: 'center',
     maxWidth: '100%',
 }))
