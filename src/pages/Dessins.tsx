@@ -1,9 +1,9 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
-import { Row, PhotoList } from '../ui/DessinList';
+import { Row, DessinList } from '../ui/DessinList';
 import { Header } from '../ui/Header';
-import { ResponsiveImg } from '../ui/Image';
+import { ResponsiveImg, ResponsiveImgContext } from '../ui/Image';
 import i1 from "../../public/portfolio_elements/page8_dessins/1.jpg"
 import i2 from "../../public/portfolio_elements/page8_dessins/2.jpg"
 import i3 from "../../public/portfolio_elements/page8_dessins/3.jpg"
@@ -17,6 +17,7 @@ import i10 from "../../public/portfolio_elements/page8_dessins/10.jpg"
 import i11 from "../../public/portfolio_elements/page8_dessins/11.jpg"
 import i12 from "../../public/portfolio_elements/page8_dessins/12.jpg"
 import letters from "../../public/portfolio_elements/page8_dessins/DESSINS lettres.png"
+import { PhotoWithModal } from '../ui/PhotoList';
 
 export function Dessins() {
     const theme = getTheme('web')
@@ -34,8 +35,8 @@ export function Dessins() {
         ]
     ]
     const rows = images.map((imagesInRow, idxRow) => {
-        const images = imagesInRow.map((src, idx) => <div key={idx + '-' + idxRow}>
-            <ResponsiveImg src={src} sizes="(min-width: 1024px) 25vw, 100vw"></ResponsiveImg></div>)
+        const images = imagesInRow.map((src, idx) => <PhotoWithModal key={idx + '-' + idxRow}>
+            <ResponsiveImg src={src}></ResponsiveImg></PhotoWithModal>)
         if (idxRow % 2) {
             images.unshift(<div style={{ flex: 2 }}></div>)
             images.push(<div style={{ flex: 2 }}></div>)
@@ -46,10 +47,10 @@ export function Dessins() {
         <Header>
             <ResponsiveImg src={letters}></ResponsiveImg>
         </Header>
-
-        <PhotoList direction="column" spacing={{ xs: 4, sm: 4, md: 8 }}>
-            {...rows}
-        </PhotoList>
-
+        <ResponsiveImgContext.Provider value={{ sizes: "(min-width: 1024px) 25vw, 100vw" }}>
+            <DessinList direction="column" spacing={{ xs: 4, sm: 4, md: 8 }}>
+                {...rows}
+            </DessinList>
+        </ResponsiveImgContext.Provider>
     </ThemeProvider>
 }

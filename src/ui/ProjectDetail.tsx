@@ -1,6 +1,7 @@
-import { Button, Stack, styled, Typography } from '@mui/material';
+import { Button, Link, Stack, styled, Typography } from '@mui/material';
 import { spacing } from '@mui/system';
 import * as React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export function APropos(props: any) {
@@ -24,7 +25,7 @@ function ProjectDetail(props: any) {
     const { title, children } = props
     return <Stack direction="column" style={{ flexGrow: 1 }}>
         <Typography variant="h6">{title}</Typography>
-        <p>{children}</p>
+        <Stack sx={{ paddingY: { xs: 1, sm: 1, md: 2 } }}>{children}</Stack>
     </Stack>
 }
 
@@ -98,10 +99,19 @@ const ProjectImageWrapper = styled(Stack)(({ theme }) => ({
 
 export function ProjectDescription(props: any) {
     const { url, children } = props
+    const seeMoreLinkRef = React.useRef<any>(null)
     const details = children.filter((c: any) => c.props.category === "detail")
     const others = children.filter((c: any) => c.props.category != "detail")
 
-    const seeMore = <Button variant='contained' sx={{ paddingX: 4, width:{xs:'100%', sm:'100%', md:'40%'} }}>Voir plus</Button>
+    const seeMore = <>
+        <Link href={url} style={{ display: 'none' }} ref={seeMoreLinkRef}></Link>
+        <Button variant='contained'
+            sx={{ paddingX: 4, width: { xs: '100%', sm: '100%', md: '40%' } }}
+            onClick={() => seeMoreLinkRef?.current?.click()}>
+            Voir plus
+        </Button>
+    </>
+
     return <Stack>
         <ProjectDescriptionWrapper spacing={4}>
             {others}

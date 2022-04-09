@@ -2,10 +2,10 @@ import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 import { Header } from '../ui/Header';
-import { ResponsiveImg } from '../ui/Image';
-import { PhotoList, Row } from '../ui/PhotoList';
+import { ResponsiveImg, ResponsiveImgContext } from '../ui/Image';
+import { PhotoList, PhotoWithModal, Row } from '../ui/PhotoList';
 import p0 from "../../public/portfolio_elements/page7_photos/000.jpg"
-import p1 from "../../public/portfolio_elements/page7_photos/000.jpg"
+import p1 from "../../public/portfolio_elements/page7_photos/001.jpg"
 import p2 from "../../public/portfolio_elements/page7_photos/002.jpg"
 import p3 from "../../public/portfolio_elements/page7_photos/003.jpg"
 import p4 from "../../public/portfolio_elements/page7_photos/004.jpg"
@@ -50,18 +50,19 @@ export function Photos() {
         ]
     ]
     const rows = images.map((imagesInRow, idxRow) => {
-        const images = imagesInRow.map((src, idx) => <div key={idx + '-' + idxRow}>
-            <ResponsiveImg src={src} sizes="(min-width: 1024px) 30vw, 100vw"></ResponsiveImg></div>)
+        const images = imagesInRow.map((src, idx) => <PhotoWithModal key={idx + '-' + idxRow}>
+            <ResponsiveImg src={src}></ResponsiveImg></PhotoWithModal>)
         return <Row key={idxRow} direction={{ xs: 'column', sm: 'column', md: 'row', lg: 'row' }} spacing={4}>{...images} </Row>
     })
     return <ThemeProvider theme={theme}>
         <Header>
             <ResponsiveImg src={lettres}></ResponsiveImg>
         </Header>
-
-        <PhotoList direction="column" spacing={4}>
-            {...rows}
-        </PhotoList>
+        <ResponsiveImgContext.Provider value={{ sizes: "(min-width: 1024px) 25vw, 100vw" }}>
+            <PhotoList direction="column" spacing={4}>
+                {...rows}
+            </PhotoList>
+        </ResponsiveImgContext.Provider>
 
     </ThemeProvider>
 }
