@@ -3,6 +3,11 @@ import App from './App';
 import {BrowserRouter} from 'react-router-dom';
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
+import "../public/favicon/apple-touch-icon.png"
+import "../public/favicon/android-chrome-192x192.png"
+import "../public/favicon/android-chrome-512x512.png"
+import "../public/favicon/favicon-32x32.png"
+import "../public/favicon/favicon-16x16.png"
 
 ReactDOM.render(
   <BrowserRouter>

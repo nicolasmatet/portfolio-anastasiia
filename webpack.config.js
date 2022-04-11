@@ -41,6 +41,10 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|png|webp)$/i,
+                exclude:[
+                    path.resolve(__dirname, "public/portfolio_elements/design_tools"),
+                    path.resolve(__dirname, "public/favicon")
+                ],
                 use: {
                     loader: 'responsive-loader',
                     options: {
@@ -50,7 +54,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(svg|gif|ico)$/,
+                test: /\.(svg|gif|ico|png)$/,
                 exclude: /node_modules/,
                 use: ['file-loader?name=[name].[ext]']
             }
