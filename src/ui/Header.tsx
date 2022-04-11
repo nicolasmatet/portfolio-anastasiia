@@ -1,10 +1,10 @@
 import { Stack, styled } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ProgressiveImg, ResponsiveImg } from './Image';
+import retour from "../../public/portfolio_elements/icone_retour.png";
+import logo from "../../public/portfolio_elements/logo_as.png";
+import { ResponsiveImg } from './Image';
 
-import logo from "../../public/portfolio_elements/logo_as.png"
-import retour from "../../public/portfolio_elements/icone_retour.png"
 
 export const Logo = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',

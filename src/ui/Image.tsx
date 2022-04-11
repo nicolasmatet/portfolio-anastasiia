@@ -37,20 +37,21 @@ export const ModalWrapper = styled(Box)(({ theme }) => ({
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '80%',
-    boxShadow: '24px',
     maxHeight: '100%',
     overflowY: 'auto',
+    'box-shadow': 'rgba(0, 0, 0, 0.6) 0px 7px 29px 0px',
     backgroundColor: '#FFFFFF',
     [theme.breakpoints.down('md')]: {
         maxWidth: '100%',
         width: '100%'
     },
     [theme.breakpoints.only('lg')]: {
-        maxWidth: theme.breakpoints.values.lg,
+        maxWidth: theme.breakpoints.values.lg * 0.8,
     },
     [theme.breakpoints.only('xl')]: {
-        maxWidth: theme.breakpoints.values.xl,
+        maxWidth: theme.breakpoints.values.xl * 0.8,
     },
+    "& img": { marginBottom: "-4px" }
 }));
 export function ImgModal(props: any) {
     const { state, children } = props
