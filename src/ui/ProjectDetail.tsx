@@ -1,7 +1,6 @@
 import { Button, Link, Stack, styled, Typography, useTheme } from '@mui/material';
-import { spacing } from '@mui/system';
 import * as React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { ImgModal } from './Image';
 
 
 export function APropos(props: any) {
@@ -127,9 +126,15 @@ export function ProjectVideo(props: any) {
 export function ProjectImage(props: any) {
     const theme = useTheme();
     const { children } = props;
-    return <Stack sx={{ alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.background.paper }}>
-        <ProjectImageWrapper>{children}</ProjectImageWrapper>
-    </Stack >
+    const [open, setOpen] = React.useState(false)
+    const modal = <ImgModal state={[open, setOpen]}>{children}</ImgModal>
+
+    return <>
+        <Stack sx={{ alignItems: 'center', justifyContent: 'center', backgroundColor: theme.palette.background.paper }} onClick={() => setOpen(true)}>
+            <ProjectImageWrapper>{children}</ProjectImageWrapper>
+        </Stack >
+        {modal}
+    </>
 }
 
 

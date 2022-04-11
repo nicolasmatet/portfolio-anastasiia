@@ -1,11 +1,11 @@
 import { Stack, styled, ThemeProvider, Typography } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+import letters from "../../public/portfolio_elements/page_portfolio_nav/PORTFOLIO lettres.png";
 import { PageList } from '../PageList';
 import { getTheme } from '../themes/Themes';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
-import letters from "../../public/portfolio_elements/page_portfolio_nav/PORTFOLIO lettres.png"
 
 const EntryImageWrapper = styled(Stack)(({ theme }) => ({
     cursor: 'pointer',

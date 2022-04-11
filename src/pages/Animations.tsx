@@ -1,11 +1,12 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import wireframe from "../../public/portfolio_elements/page5_animation/06 Wareframes gif.gif";
+import letters from "../../public/portfolio_elements/page5_animation/ANIMATION lettres.png";
 import { getTheme } from '../themes/Themes';
 import { AfterEffect, Figma, Illustrator } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, ProjectVideo, Projet, TravailRealise } from '../ui/ProjectDetail';
-import letters from "../../public/portfolio_elements/page5_animation/ANIMATION lettres.png"
 
 export function Animations() {
     const theme = getTheme('animations')
@@ -81,7 +82,7 @@ export function Animations() {
 
             <ProjectImage>
                 <div>
-                    <ProgressiveImg src="/portfolio_elements/page5_animation/06 Wareframes gif.gif" />
+                    <ProgressiveImg src={wireframe} />
                 </div>
             </ProjectImage>
 

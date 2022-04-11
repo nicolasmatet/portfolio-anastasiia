@@ -1,13 +1,13 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import lettres from "../../public/portfolio_elements/page1_web/design_web_letters.png";
+import projet_danse_dense from '../../public/portfolio_elements/page1_web/projet_danse_dense.png';
+import projet_impact from '../../public/portfolio_elements/page1_web/projet_impact.png';
 import { getTheme } from '../themes/Themes';
 import { Figma, Illustrator, Wordpress } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
+import { ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
-import projet_danse_dense from '../../public/portfolio_elements/page1_web/projet_danse_dense.png'
-import projet_impact from '../../public/portfolio_elements/page1_web/projet_impact.png'
-import lettres from "../../public/portfolio_elements/page1_web/design_web_letters.png"
 
 export function DesignWeb() {
     const theme = getTheme('web')

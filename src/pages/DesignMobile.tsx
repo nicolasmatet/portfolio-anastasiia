@@ -1,13 +1,13 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import lettres from "../../public/portfolio_elements/page2_mobile/DESIGN MOBILE lettres.png";
+import projet_thefood from "../../public/portfolio_elements/page2_mobile/projet thefood.png";
+import projet_tomorrow from "../../public/portfolio_elements/page2_mobile/projet tomorrow.png";
 import { getTheme } from '../themes/Themes';
 import { AfterEffect, Figma, Illustrator, Premiere } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
-import { ProgressiveImg, ResponsiveImg } from '../ui/Image';
+import { ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
-import projet_tomorrow from "../../public/portfolio_elements/page2_mobile/projet tomorrow.png"
-import projet_thefood from "../../public/portfolio_elements/page2_mobile/projet thefood.png"
-import lettres from "../../public/portfolio_elements/page2_mobile/DESIGN MOBILE lettres.png"
 
 export function DesignMobile() {
     const theme = getTheme('mobile')

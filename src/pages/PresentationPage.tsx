@@ -1,15 +1,15 @@
-import { Button, Stack, styled, ThemeProvider, Typography, Link } from '@mui/material';
+import { Button, Link, Stack, styled, ThemeProvider, Typography } from '@mui/material';
 import * as React from 'react';
 import { useNavigate } from 'react-router-dom';
+import bonjour from "../../public/portfolio_elements/page_cv/bonjour.png";
+import logo from "../../public/portfolio_elements/page_cv/logo_blanc.png";
+import tel from "../../public/portfolio_elements/page_cv/tel_et_photo.png";
 import { getTheme } from '../themes/Themes';
 import { CVGrid, CVSquare, SquarePrimary } from '../ui/Cv';
 import { HeaderContainer, Logo } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
 import { SocialLinks } from '../ui/SocialLinks';
 
-import logo from "../../public/portfolio_elements/page_cv/logo_blanc.png"
-import bonjour from "../../public/portfolio_elements/page_cv/bonjour.png"
-import tel from "../../public/portfolio_elements/page_cv/tel_et_photo.png"
 
 
 const SocialLinksWrapper = styled(SocialLinks)(({ theme }) => ({

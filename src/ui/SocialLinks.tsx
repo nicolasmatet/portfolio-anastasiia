@@ -1,9 +1,9 @@
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
+import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import { Link, Stack, SvgIcon } from '@mui/material';
 import * as React from 'react';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import MailOutlineRoundedIcon from '@mui/icons-material/MailOutlineRounded';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import PhotoCameraOutlinedIcon from '@mui/icons-material/PhotoCameraOutlined';
 import { ReactComponent as BehanceImg } from '../../public/portfolio_elements/social_icons/behance.svg';
 
 export function BehanceIcon() {

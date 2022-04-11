@@ -1,11 +1,11 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import letters from "../../public/portfolio_elements/page6_videos/VIDEOS lettres.png";
 import { getTheme } from '../themes/Themes';
-import { AfterEffect, Camtasia, Figma, Illustrator, Premiere } from '../ui/DesignTools';
+import { AfterEffect, Camtasia, Illustrator, Premiere } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
-import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, ProjectVideo, Projet, TravailRealise } from '../ui/ProjectDetail';
-import letters from "../../public/portfolio_elements/page6_videos/VIDEOS lettres.png"
+import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectVideo, Projet, TravailRealise } from '../ui/ProjectDetail';
 export function Videos() {
     const theme = getTheme('animations')
     return <ThemeProvider theme={theme}>

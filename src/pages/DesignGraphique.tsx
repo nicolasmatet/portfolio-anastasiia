@@ -1,42 +1,42 @@
 import { ThemeProvider } from '@mui/material';
 import * as React from 'react';
+import lettres from "../../public/portfolio_elements/page3_graphique/design_graphique_letters.png";
+import p1_i1 from "../../public/portfolio_elements/page3_graphique/projet1_bh_1.png";
+import p1_i2 from "../../public/portfolio_elements/page3_graphique/projet1_bh_2.png";
+import p1_i3 from "../../public/portfolio_elements/page3_graphique/projet1_bh_3.png";
+import p1_i4 from "../../public/portfolio_elements/page3_graphique/projet1_bh_4.png";
+import p2_i1 from "../../public/portfolio_elements/page3_graphique/projet2 budget 1.png";
+import p2_i2 from "../../public/portfolio_elements/page3_graphique/projet2 budget 2.png";
+import p2_i3 from "../../public/portfolio_elements/page3_graphique/projet2 budget 3.png";
+import p2_i4 from "../../public/portfolio_elements/page3_graphique/projet2 budget 4.png";
+import p3_i1 from "../../public/portfolio_elements/page3_graphique/projet3 ie 1.png";
+import p3_i2 from "../../public/portfolio_elements/page3_graphique/projet3 ie 2.png";
+import p3_i3 from "../../public/portfolio_elements/page3_graphique/projet3 ie 3.png";
+import p4_i1 from "../../public/portfolio_elements/page3_graphique/projet4 dd 1.png";
+import p4_i2 from "../../public/portfolio_elements/page3_graphique/projet4 dd 2.png";
+import p5_i1 from "../../public/portfolio_elements/page3_graphique/projet5 illu 1.png";
+import p5_i2 from "../../public/portfolio_elements/page3_graphique/projet5 illu 2.png";
+import p5_i3 from "../../public/portfolio_elements/page3_graphique/projet5 illu 3.png";
+import p5_i4 from "../../public/portfolio_elements/page3_graphique/projet5 illu 4.png";
+import p6_i1 from "../../public/portfolio_elements/page3_graphique/projet6 3d 1.png";
+import p6_i2 from "../../public/portfolio_elements/page3_graphique/projet6 3d 2.png";
+import p7_i1 from "../../public/portfolio_elements/page3_graphique/projet7 site 1.png";
+import p7_i2 from "../../public/portfolio_elements/page3_graphique/projet7 site 2.png";
 import { getTheme } from '../themes/Themes';
+import { Carousel } from '../ui/Carousel';
 import { Figma, Illustrator, InDesign, Spline } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, Projet, TravailRealise } from '../ui/ProjectDetail';
-import { Carousel } from '../ui/Carousel';
-
-import p1_i1 from "../../public/portfolio_elements/page3_graphique/projet1_bh_1.png"
-import p1_i2 from "../../public/portfolio_elements/page3_graphique/projet1_bh_2.png"
-import p1_i3 from "../../public/portfolio_elements/page3_graphique/projet1_bh_3.png"
-import p1_i4 from "../../public/portfolio_elements/page3_graphique/projet1_bh_4.png"
 
 
-import p2_i1 from "../../public/portfolio_elements/page3_graphique/projet2 budget 1.png"
-import p2_i2 from "../../public/portfolio_elements/page3_graphique/projet2 budget 2.png"
-import p2_i3 from "../../public/portfolio_elements/page3_graphique/projet2 budget 3.png"
-import p2_i4 from "../../public/portfolio_elements/page3_graphique/projet2 budget 4.png"
-
-import p3_i1 from "../../public/portfolio_elements/page3_graphique/projet3 ie 1.png"
-import p3_i2 from "../../public/portfolio_elements/page3_graphique/projet3 ie 2.png"
-import p3_i3 from "../../public/portfolio_elements/page3_graphique/projet3 ie 3.png"
-
-import p4_i1 from "../../public/portfolio_elements/page3_graphique/projet4 dd 1.png"
-import p4_i2 from "../../public/portfolio_elements/page3_graphique/projet4 dd 2.png"
-
-import p5_i1 from "../../public/portfolio_elements/page3_graphique/projet5 illu 1.png"
-import p5_i2 from "../../public/portfolio_elements/page3_graphique/projet5 illu 2.png"
-import p5_i3 from "../../public/portfolio_elements/page3_graphique/projet5 illu 3.png"
-import p5_i4 from "../../public/portfolio_elements/page3_graphique/projet5 illu 4.png"
-
-import p6_i1 from "../../public/portfolio_elements/page3_graphique/projet6 3d 1.png"
-import p6_i2 from "../../public/portfolio_elements/page3_graphique/projet6 3d 2.png"
 
 
-import p7_i1 from "../../public/portfolio_elements/page3_graphique/projet7 site 1.png"
-import p7_i2 from "../../public/portfolio_elements/page3_graphique/projet7 site 2.png"
-import lettres from "../../public/portfolio_elements/page3_graphique/design_graphique_letters.png"
+
+
+
+
+
 export function DesignGraphique() {
     const theme = getTheme('graphique')
     return <ThemeProvider theme={theme}>
