@@ -1,8 +1,15 @@
 import { ThemeProvider } from '@emotion/react';
-import { Button, CssBaseline, Stack, Typography } from '@mui/material';
+import { Button, CssBaseline, Stack, styled, Typography } from '@mui/material';
 import * as React from 'react';
 import { getTheme } from '../themes/Themes';
 
+const PresentationButton = styled(Button)(({ theme }) => ({
+    flex: 1,
+    paddingLeft: theme.spacing(8),
+    paddingRight: theme.spacing(8),
+    lineHeight: 1.7,
+    whiteSpace: 'nowrap'
+}))
 
 export function LandingPage() {
     const theme = getTheme('landing')
@@ -18,12 +25,12 @@ export function LandingPage() {
                     margin: 'auto',
                     display: 'flex',
                 }}>
-                <Button variant="outlined" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/presentation' >
+                <PresentationButton variant="outlined" href='/presentation' >
                     À PROPOS DE MOI
-                </Button>
-                <Button variant="contained" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/portfolio'>
+                </PresentationButton>
+                <PresentationButton variant="contained" href='/portfolio'>
                     PORTFOLIO
-                </Button>
+                </PresentationButton>
             </Stack>
         </Stack>
         <iframe
