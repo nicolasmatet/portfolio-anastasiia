@@ -9,6 +9,7 @@ import { CVGrid, CVSquare, SquarePrimary } from '../ui/Cv';
 import { HeaderContainer, Logo } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
 import { SocialLinks } from '../ui/SocialLinks';
+import cv_pdf from '../../public/docs/cv_anastasiia_sokhina.pdf'
 
 
 
@@ -65,7 +66,7 @@ export function PresentationPage() {
                     direction={{ xs: 'column', sm: 'column', md: 'column', lg: 'row' }}
                     spacing={{ xs: 2, sm: 2, md: 4 }}
                     sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Link href="/cv_anastasiia_sokhina.pdf" style={{ display: 'none' }} ref={cvRef}>Download</Link>
+                    <Link href={cv_pdf} style={{ display: 'none' }} ref={cvRef}>Download</Link>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='contained' onClick={clickCvLink}>CV</Button>
                     <Button sx={{ flex: 2, whiteSpace: "nowrap", minWidth: "16ch" }} variant='outlined' onClick={() => navigate('/portfolio')}>VOIR PORTFOLIO</Button>
                     <SocialLinksWrapper />

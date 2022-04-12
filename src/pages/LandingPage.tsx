@@ -19,7 +19,7 @@ export function LandingPage() {
                     display: 'flex',
                 }}>
                 <Button variant="outlined" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/presentation' >
-                    ABOUT ME
+                    À PROPOS DE MOI
                 </Button>
                 <Button variant="contained" sx={{ flex: 1, paddingLeft: 8, paddingRight: 8 }} href='/portfolio'>
                     PORTFOLIO

@@ -54,7 +54,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.(svg|gif|ico|png)$/,
+                test: /\.(svg|gif|ico|png|pdf)$/,
                 exclude: /node_modules/,
                 use: ['file-loader?name=[name].[ext]']
             }
@@ -83,8 +83,7 @@ module.exports = {
         }),
         new CopyPlugin({
             patterns: [
-                { from: "public/manifest.json", to: "" },
-                { from: "public/cv_anastasiia_sokhina.pdf", to: "" }
+                { from: "public/manifest.json", to: "" }
             ],
         })
     ],

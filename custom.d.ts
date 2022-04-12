@@ -26,6 +26,13 @@ declare module "*.jpeg" {
     const value: any;
     export default value;
 }
+
+
+declare module "*.pdf" {
+    const value: any;
+    export default value;
+}
+
 // declare module 'ConfigData' {
 //     export interface ConfigData {
 //         API_URL: string;

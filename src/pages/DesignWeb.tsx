@@ -8,6 +8,7 @@ import { Figma, Illustrator, Wordpress } from '../ui/DesignTools';
 import { Header } from '../ui/Header';
 import { ResponsiveImg } from '../ui/Image';
 import { APropos, Date, Outils, Perimetre, ProjectDescription, ProjectImage, Projet, TravailRealise } from '../ui/ProjectDetail';
+import projet_impact_pdf from '../../public/docs/projet_impact.pdf'
 
 export function DesignWeb() {
     const theme = getTheme('web')
@@ -17,7 +18,7 @@ export function DesignWeb() {
         </Header>
 
         <Projet>
-            <ProjectDescription url="/">
+            <ProjectDescription url="https://www.behance.net/gallery/141421587/UXUI-Design-Association-Danse-Dense">
                 <APropos>
                     Ce projet a été réalisé dans le cadre du travail de fin d'études pour le Master Cultures et Métiers du Web.<br></br>
                     Le but de ce projet est de créer une nouvelle interface du site en cohérence avec les valeurs actuelles de l'assosiation Danse Dense.
@@ -50,9 +51,8 @@ export function DesignWeb() {
         </Projet>
 
         <Projet reverse>
-
-
-            <ProjectDescription url="/">
+            {/* projet impact */}
+            <ProjectDescription url={projet_impact_pdf}>
                 <APropos>
                     Ce projet a été réalisé dans le cadre d'accompagnement des startups ministérielles sur un volet Design UX/UI de la plateforme impact.gouv.fr.<br></br>
                     <br></br>
