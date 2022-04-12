@@ -52,7 +52,7 @@ export function DesignMobile() {
         <Projet reverse>
 
 
-            <ProjectDescription url="/">
+            <ProjectDescription>
                 {/* tomorrow */}
                 <APropos>
 
