@@ -85,18 +85,18 @@ export const ProjectVideoWrapper = styled(Stack)(({ theme }) => ({
         height: 157
     },
     [theme.breakpoints.up('sm')]: {
-        maxWidth: 560,
-        maxHeight: 315,
-        width: 560,
-        height: 315
-    },
-    [theme.breakpoints.only('lg')]: {
         maxWidth: 400,
         maxHeight: 225,
         width: 400,
         height: 225
     },
-    [theme.breakpoints.up('lg')]: {
+    [theme.breakpoints.only('lg')]: {
+        maxWidth: 560,
+        maxHeight: 315,
+        width: 560,
+        height: 315
+    },
+    [theme.breakpoints.up('xl')]: {
         maxWidth: 784,
         maxHeight: 441,
         width: 896,
