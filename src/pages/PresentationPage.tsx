@@ -106,10 +106,10 @@ export function PresentationPage() {
                     - J'ai dansé dans le ballet au théâtre Mariinsky de Saint-Pétersbourg à l'âge de 13 ans<br></br>
                     - J'ai déménagé seule en France quand j'avais 24 ans<br></br>
                     - La presse a beaucoup parlé de moi (même en France)<br></br>
-                    - J'ai joué un rôle de figurant dans la série télévisée Émilie in Paris<br></br>
+                    - J'ai joué un rôle de figurant dans la série télévisée Émilie in Paris (épisodes 9 et 10)<br></br>
                     - J'ai dansé dans un spectacle au Carreau du temple (janvier 2022)<br></br>
-                    - J'ai 3 750 followers sur Instagram<br></br>
-                    - J'ai fini le GTA
+                    - J'ai 3 650 followers sur Instagram<br></br>
+                    - J'ai fini GTA (Vice City et San Andreas)
                 </Typography>
             </CVSquare>
             <CVSquare>
